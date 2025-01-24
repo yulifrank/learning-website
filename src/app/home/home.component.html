@@ -1,0 +1,21 @@
+<div class="home-container">
+  <!-- טקסט שיתקדם -->
+  <p class="text-scroll">ברוכים הבאים! כאן תמצאו פתרונות לבעיות אלגוריתמיות, הסברים חשובים בתכנות, וטיפים שיעזרו לכם לפתח את כישורי הקוד שלכם!</p>
+
+  <!-- מידע נוסף למעלה -->
+  <p class="text">באתר זה תוכל למצוא מגוון נושאים מעניינים שיכולים לעזור לך להעמיק בתחום התכנות, פתרונות בעיות אלגוריתמיות, וללמוד טכניקות חדשות בתחום. בחר נושא שמעניין אותך והתחל ללמוד!</p>
+
+  <div class="categories-grid">
+    <div *ngFor="let category of categories" class="category-card" (click)="onCategorySelect(category.name)">
+      <mat-card class="category-card-content">
+        <mat-card-header>
+          <img mat-card-image [src]="category.image" alt="{{ category.name }}" class="category-thumbnail"/>
+        </mat-card-header>
+        <mat-card-title class="category-card-title">{{ category.name }}</mat-card-title>
+        <mat-card-content>
+          <p>{{ category.description }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

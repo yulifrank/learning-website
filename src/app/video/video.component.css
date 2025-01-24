@@ -1,0 +1,19 @@
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 50px);
+  max-width: 1074px; /* הגבלת רוחב למקסימום 1074px */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #0000005e;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  margin-top: 2%;
+}
+
+iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,140 @@
+{
+  "categories": [
+    {
+      "name": "שאלות באלגוריתמים",
+      "description": "קטגוריה זו כוללת שאלות ופתרונות אלגוריתמיים שיכולים לעזור לכם להבין ולפתור בעיות בצורה יעילה ובמהירות. כאן תמצאו את כל מה שקשור לאלגוריתמים, כולל מחסניות, אלגוריתמים דינאמיים, ועוד.",
+      "image": "../../assets/Images/Leonardo_Phoenix_09_A_visually_engaging_image_of_a_whiteboard_1 (1).jpg",
+      "videos": [
+        {
+          "title": "פתרון בעיות אלגוריתמיות | בדיקת תקינות סוגריים בעזרת מחסנית ב-Python",
+          "description": "✨ האם מחרוזת של סוגריים תקינה? 🤔 בואו לגלות פתרון פשוט, חכם ומהיר לבעיה אלגוריתמית עם מחסנית (Stack) ב-Python! 🐍.",
+          "youtubeId": "_a7faT0Cd8g",
+          "imageUrl": "../../assets/Images/Leonardo_Phoenix_09_A_visually_engaging_image_of_a_whiteboard_1 (1).jpg"
+        },
+        {
+          "title": "פתרון בעיות אלגוריתמיות: בעיית Two Sum ב-Python!",
+          "description": "מחפשים פתרון יעיל וחכם לבעיית Two Sum?😁 בסרטון הזה תראו איך לפתור את הבעיה בצורה פשוטה, מהירה ומובנת באמצעות מילון ב-Python.",
+          "youtubeId": "MB3HkQTmGnA",
+          "imageUrl": "../../assets/Images/Leonardo_Phoenix_09_A_visually_engaging_image_of_a_whiteboard_1 (1).jpg"
+        },
+        {
+          "title": "פתרון בעיות אלגוריתמיות: Pivot Index – איזון בין סכומים ברשימה",
+          "description": "בסרטון הזה נחקור בעיה אלגוריתמית פשוטה אך גאונית: מציאת אינדקס pivot ברשימה! ✨ המטרה: למצוא אינדקס שבו סכום המספרים בצד שמאל שווה לסכום המספרים בצד ימין—והכל ביעילות של O(n).",
+          "youtubeId": "DJ1dPbH3F0Y",
+          "imageUrl": "../../assets/Images/Leonardo_Phoenix_09_A_visually_engaging_image_of_a_whiteboard_1 (1).jpg"
+        },
+        {
+          "title": "פתרון בעיות אלגוריתמיות: איך למצוא את המספר הבודד בקלות עם XOR",
+          "description": "✨ איך למצוא את המספר הבודד ברשימה? 🤔 בסרטון הזה, נלמד יחד על פתרון אלגנטי וקל לבעיה הזו באמצעות XOR בפייתון 🐍.",
+          "youtubeId": "HKj33qxMZkI",
+          "imageUrl": "../../assets/Images/Leonardo_Phoenix_09_A_visually_engaging_image_of_a_whiteboard_1 (1).jpg"
+        },
+        {
+          "title": "פתרון בעיות אלגוריתמיות: בעיית חיתוך המוט | Rod Cutting Problem",
+          "description": "בבסיס הבעיה עומדת המשימה למקסם את הרווח ממכירת מוטות מתכת על ידי חיתוך המוטות לחתיכות באורכים שונים.",
+          "youtubeId": "ssbs8XUWfjE",
+          "imageUrl": "../../assets/Images/Leonardo_Phoenix_09_A_visually_engaging_image_of_a_whiteboard_1 (1).jpg"
+        },
+        {
+          "title": "פתרון בעיות אלגוריתמיות: מציאת תת-הרצף המקסימלי (Maximum Subarray Problem)",
+          "description": "בואו נצלול לאחת הבעיות המעניינות בעולם האלגוריתמים הדינאמיים – בעיית תת-הרצף המקסימלי (Maximum Subarray Problem)!",
+          "youtubeId": "EIAmZHvHYPI",
+          "imageUrl": "../../assets/Images/Leonardo_Phoenix_09_A_visually_engaging_image_of_a_whiteboard_1 (1).jpg"
+        },
+        {
+          "title": "פתרון בעיות אלגוריתמיות: טיפוס על סולם בעל N שלבים",
+          "description": "בסרטון זה נפתור שלב אחר שלב בעיה קלאסית באלגוריתמים דינאמיים - איך אפשר לטפס על סולם בעל N שלבים.",
+          "youtubeId": "Tqz5clf_Plc",
+          "imageUrl": "../../assets/Images/Leonardo_Phoenix_09_A_visually_engaging_image_of_a_whiteboard_1 (1).jpg"
+        },
+        {
+          "title": "פתרון בעיות אלגוריתמיות: האיבר האמצעי ברשימה מקושרת",
+          "description": "בסרטון הזה נפתור את הבעיה \"האיבר האמצעי ברשימה מקושרת\" באמצעות קוד Python.",
+          "youtubeId": "NFTqqATzJQk",
+          "imageUrl": "../../assets/Images/Leonardo_Phoenix_09_A_visually_engaging_image_of_a_whiteboard_1 (1).jpg"
+        },
+        {
+          "title": "פתרון בעיות אלגוריתמיות: בעיית התיק בשלמים (Knapsack Problem) ב-C#",
+          "description": "הכירו את \"הבעיה של התיק בשלמים\" – אחת הבעיות המרתקות בתחום האלגוריתמיקה!",
+          "youtubeId": "2w5lN8ozzro",
+          "imageUrl": "../../assets/Images/Leonardo_Phoenix_09_A_visually_engaging_image_of_a_whiteboard_1 (1).jpg"
+        }
+      ]
+    },
+    {
+      "name": "   לניהול הזמנות APIi  בניית ",
+      "description": "כאן תלמדו איך לבנות מערכת API בצד שרת בעזרת .NET ואנגולר בצד הלקוח. זהו תהליך של יצירת קונטרולרים, מודלים, והגדרות חיבור בין השרת ללקוח.",
+      "image": "../../assets/Images/api.jpg",
+      "videos": [
+        {
+          "title": "מדריך מתחילים: 🚀 בניית מערכת API עם .NET ואנגולר - חלק א' יצירת מודלים",
+          "description": "ברוכים הבאים לסרטון הראשון בסדרה שלנו על בניית מערכת פשוטה שמחברת בין צד שרת ב-.NET לבין צד לקוח ב-Angular! 🚀.",
+          "youtubeId": "soMx--EoaoA",
+          "imageUrl": "../../assets/Images/api.jpg"
+        },
+        {
+          "title": "מדריך מתחילים: 🚀 בניית מערכת API עם .NET ואנגולר - חלק ב' בניית API",
+          "description": "בסרטון הזה נתקדם לשלב הבא ונבנה את הקונטרולר הראשון שלנו ב-API.",
+          "youtubeId": "f6ppB5vmx6k",
+          "imageUrl": "../../assets/Images/api.jpg"
+        },
+        {
+          "title": "מדריך מתחילים: 🚀 בניית מערכת API עם .NET ואנגולר - חלק ג' בניית בסיס לאפליקציה עם Angular",
+          "description": "ברוכים הבאים לסרטון השלישי בסדרה! 🚀 הפעם אנחנו עוברים לעבודה בצד הלקוח ונבנה אפליקציה מבוססת Angular.",
+          "youtubeId": "PwrkZkurkLE",
+          "imageUrl": "../../assets/Images/api.jpg"
+        },
+        {
+          "title": "מדריך מתחילים: 🚀 בניית מערכת API עם .NET ואנגולר - חלק ד' תקשורת עם השרת",
+          "description": "ברוכים הבאים לסרטון הרביעי בסדרה! 🌐 בסרטון הזה נתחיל ליצור חיבור אמיתי בין אפליקציית ה-Angular שלנו ל-API שיצרנו.",
+          "youtubeId": "J-m5f2spVZw",
+          "imageUrl": "../../assets/Images/api.jpg"
+        },
+        {
+          "title": "מדריך מתחילים: 🚀 בניית מערכת API עם .NET ואנגולר - חלק ה' תקשורת עם השרת",
+          "description": "ברוכים הבאים לסרטון החמישי בסדרה! 🌐 בסרטון הזה נתחיל ליצור חיבור אמיתי בין אפליקציית ה-Angular שלנו ל-API שיצרנו.",
+          "youtubeId": "CZFWES0BBJI",
+          "imageUrl": "../../assets/Images/api.jpg"
+        }
+      ]
+    },
+    {
+      "name": " Python חישוב ביטויים ",
+      "description": "כאן תלמדו איך לבנות מערכת לחישוב ביטויים מתמטיים בעזרת Python. התהליך יכלול יצירת מודלים, אלגוריתמים ושימוש בספריות שונות ב-Python כדי לחשב ביטויים בצורה חכמה ויעילה.",
+      "image": "../../assets/Images/python.png",
+      "videos": [
+        {
+          "title": "איך לבנות מערכת לחישוב ביטויים מתמטיים? | Python - חלק 1: מחלקות בסיסיות",
+          "description": "✨ בסרטון הזה אנחנו מתחילים את המסע לבניית מערכת לחישוב ביטויים מתמטיים בצורה מתקדמת ב-Python!",
+          "youtubeId": "h_0YNA-EBSE",
+          "imageUrl": "../../assets/Images/python.png"
+        },
+        {
+          "title": "איך לבנות מערכת לחישוב ביטויים מתמטיים? | Python - חלק 2: אלגוריתם Shunting Yard",
+          "description": "💡 איך מחשבים מבינים ביטויים מתמטיים? 🤔 בואו נצלול לתוך אלגוריתם שנטינג יארד 📐.",
+          "youtubeId": "DwttgUWXUOk",
+          "imageUrl": "../../assets/Images/python.png"
+        },
+        {
+          "title": "איך לבנות מערכת לחישוב ביטויים מתמטיים? | Python - חלק 3: יצירת עץ ביטוי והרצה",
+          "description": "🤩 בסרטון הזה אנחנו הופכים את פורמט הפוסטפיקס לעץ ביטויים חכם! 💻.",
+          "youtubeId": "tQxM0ioBPpE",
+          "imageUrl": "../../assets/Images/python.png"
+        }
+      ]
+    },
+    {
+      "name": "נושאים שונים",
+      "description": "קטגוריה זו כוללת מגוון של נושאים שונים ומרתקים בעולם התכנות, אלגוריתמים וטכנולוגיות שונות.",
+      "image": "../../assets/Images/computer.png",
+      "videos": [
+        {
+          "title": "פתרון בעיות אלגוריתמיות | בדיקת תקינות סוגריים בעזרת מחסנית ב-Python",
+          "description": "✨ האם מחרוזת של סוגריים תקינה? 🤔 בואו לגלות פתרון פשוט, חכם ומהיר לבעיה אלגוריתמית עם מחסנית (Stack) ב-Python! 🐍.",
+          "youtubeId": "_a7faT0Cd8g",
+          "imageUrl": "../../assets/Images/computer.png"
+        }
+      ]
+    }
+  ]
+}

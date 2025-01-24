@@ -1,0 +1,15 @@
+<div class="videos-grid" *ngIf="videos.length > 0; else noVideos">
+  <mat-card *ngFor="let video of videos" class="video-card" (click)="onSelectVideo(video)">
+    <mat-card-header>
+      <img mat-card-image [src]="video.imageUrl" alt="{{ video.title }}" class="category-thumbnail"/>
+    </mat-card-header>
+    <mat-card-content>
+      <h3 class="video-title">{{ video.title }}</h3>
+      <p class="video-description">{{ video.description }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<ng-template #noVideos>
+  <p class="no-videos-message">לא נמצאו סרטונים בקטגוריה זו.</p>
+</ng-template>
