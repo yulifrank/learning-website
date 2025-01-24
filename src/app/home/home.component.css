@@ -155,7 +155,7 @@
   display: inline-block;
   white-space: nowrap;
   animation: slideIn 10s linear infinite; /* 10 שניות וינסה כל הזמן */
-  width: 80%; /* רוחב 80% */
+  width: 100%; /* רוחב 80% */
   margin-bottom: 30px; /* קצת רווח מתחת */
 }
 
@@ -193,7 +193,7 @@
   display: inline-block;
   white-space: nowrap;
   animation: slideIn 10s linear infinite;
-  width: 80%;
+  width: 100%;
   margin-bottom: 30px;
 }
 
@@ -306,4 +306,33 @@
 .category-card:hover {
   transform: scale(1.05); /* הגדלה ב-5% */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* הוספת צל חזק יותר */
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%); /* מתחיל מעבר מעבר למסך מצד ימין */
+    color: #000a77; /* צבע התחלתי */
+  }
+  25% {
+    color: #a40080; /* צבע נוסף */
+  }
+  50% {
+    color: #3c0374; /* צבע נוסף */
+  }
+  75% {
+    color: #750067; /* צבע נוסף */
+  }
+  100% {
+    transform: translateX(100%); /* יתחיל שוב מצד שמאל אחרי מעבר מלא */
+    color: #16086f; /* צבע חזרה בהדרגה */
+  }
+}
+
+.text-scroll {
+  font-size: 80px; /* גודל יותר גדול */
+  font-weight: bold;
+  display: inline-block;
+  white-space: nowrap;
+  animation: slideIn 15s linear infinite; /* יותר זמן לאנימציה כדי שתהיה זורמת */
+  width: 100%;
+  margin-bottom: 30px;
 }
