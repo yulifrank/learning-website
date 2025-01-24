@@ -3,14 +3,16 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
-  padding: 0 20px;
-  margin-top: 5%;
+  padding: 0 30px;
+  margin-top: 7%;
   direction: rtl;
   animation: fadeIn 1s ease-in-out;
+  margin-right: 4%;
+  margin-left: 4%;
 }
 
 .video-card {
-  width: 22%;
+  width: 23%;
   cursor: pointer;
   border-radius: 12px;
   overflow: hidden;
@@ -21,6 +23,9 @@
   direction: rtl;
   opacity: 0;
   animation: fadeIn 0.8s forwards;
+    border: 17px solid;
+    border-image: linear-gradient(45deg, rgba(23, 10, 171, 0.811), rgba(80, 0, 54, 0.564)) 1; /* גרדיאנט מותאם */
+
 }
 
 .video-card:hover {
@@ -111,4 +116,8 @@
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 10px;
+}
+
+.all-card{
+background-color: #00000069;
 }

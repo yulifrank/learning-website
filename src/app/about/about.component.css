@@ -4,13 +4,15 @@
     background-size: cover;
     background-position: center;
     text-align: center;
+    
 }
+
 
 .about-container {
     margin: 50px auto;
-    max-width: 70%;
-    padding: 30px;
-    background-color: #f9f9f9c0;
+    max-width: 100%;
+    padding: 40px;
+    background-color: #f9f9f94b;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     direction: rtl;
@@ -18,6 +20,12 @@
     opacity: 0;
     transform: translateX(-100%);
     animation: slideIn 1s forwards;
+    align-items: center;
+}
+.about-text{
+    max-width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 @keyframes slideIn {
@@ -29,25 +37,25 @@
 
 .about-container h1 {
     font-size: 32px;
-    color: #2c3e50;
+    color: #000158;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .about-container h2 {
-    font-size: 20px;
-    color: #34495e;
+    font-size: 24px;
+    color: #123253;
     margin-top: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-weight: 600;
 }
 
 .about-container p {
-    font-size: 16px;
-    color: #555;
+    font-size: 19px;
+    color: #141249;
     line-height: 1.8;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .about-container ul {
@@ -56,14 +64,14 @@
 }
 
 .about-container ul li {
-    margin-bottom: 15px;
-    font-size: 16px;
-    color: #34495e;
+    margin-bottom: 5px;
+    font-size: 19px;
+    color: #08233e;
     line-height: 1.6;
 }
 
 .about-container a {
-    color: #2575fc;
+    color: #000000;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
@@ -96,3 +104,28 @@
         font-size: 16px;
     }
 }
+
+.gradient-text {
+    background: linear-gradient(45deg, #ff1500, #12048f, #42788a);
+    background-size: 200% 200%; /* מאפשר לגרדיאנט לזוז */
+    -webkit-background-clip: text; /* חיתוך לפי טקסט */
+    -webkit-text-fill-color: transparent; /* הסתרת הטקסט עצמו */
+    animation: gradient-animation 3s infinite; /* אנימציה מתמשכת */
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+
+  
+  
+  

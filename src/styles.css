@@ -8,3 +8,7 @@ html, body {
     background: linear-gradient(135deg, #000000, #0b1233, #1c4063, #38567a);
     color: #ecf0f1; /* צבע טקסט בהיר כדי להחזיר את הקונטרסט */
   }
+  html {
+    scroll-behavior: smooth; /* יגרום לגלילה להיות חלקה */
+  }
+  

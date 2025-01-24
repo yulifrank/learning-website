@@ -2,7 +2,7 @@
   margin-top: 5%;
   border-radius: 12px;
   font-family: 'Arial', sans-serif;
-  text-align: center;
+  text-align: center; /* יישור במרכז */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -13,12 +13,17 @@
 }
 
 .home-container h1 {
-  font-size: 36px;
-  color: #2c3e50;
+  font-size: 48px; /* הגדלת גודל הטקסט */
+  color: #f0f0f0; /* צבע בהיר יותר */
   margin-bottom: 10px;
   font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* הוספת צללית לטקסט */
+  overflow: hidden; /* כדי להבטיח שהטקסט לא ייצא מהמיכל */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* מקסימום שתי שורות */
+  -webkit-box-orient: vertical;
 }
 
 .home-container p {
@@ -70,6 +75,8 @@
 .category-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  background-color: #ffffff1b;
 }
 
 .category-thumbnail {
@@ -94,11 +101,12 @@
   align-items: center;
   justify-content: flex-start;
   flex-grow: 1;
+  background: #ffffffe6;
 }
 
 .category-card-content p {
   font-size: 14px;
-  color: #555;
+  color: #190754;
   margin-top: 15px;
   flex-grow: 1;
   overflow: hidden;
@@ -177,6 +185,7 @@
     animation: slideIn 12s linear infinite; /* יותר זמן לאנימציה במסכים קטנים */
   }
 }
+
 .text-scroll {
   font-size: 40px; /* גדל את גודל הטקסט כאן גם */
   font-weight: bold;
@@ -188,17 +197,19 @@
   margin-bottom: 30px;
 }
 
-.home-container h1 {
-  font-size: 48px; /* הגדל את הגודל של הטקסט */
-  color: #2c3e50; /* צבע כהה לטקסט */
-  margin-bottom: 10px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* הוספת צללת לטקסט כדי להבליט אותו */
+.text{
+  font-size: 22px;
+  color: #f7fbff; /* צבע כהה יותר לפסקה */
+  margin-bottom: 15px;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center; /* מרכז את הטקסט */
+  line-height: 1.8;
+  max-width: 100%; /* יש למנוע מהטקסט לצאת מהמסך */
+  white-space: normal; /* טקסט יישבר לשורות */
+  word-wrap: break-word; /* לא לעטוף מילים גדולות מדי */
 }
 .category-card {
-  position: relative;
   background-color: #ffffff21;
   border-radius: 8px;
   padding: 20px;
@@ -212,6 +223,7 @@
   width: 300px;
   max-width: 100%;
   overflow: hidden;
+  position: relative; /* חשוב שיהיה */
 }
 
 .category-card:hover {
@@ -219,27 +231,79 @@
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
+/* פס תחת כותרת */
 .category-card-title {
-  position: relative;
   font-size: 22px;
   color: #2c3e50;
   font-weight: bold;
   margin-top: 15px;
   text-transform: capitalize;
   letter-spacing: 1px;
+  position: relative; /* נדרש לפס שיהיה מתחת לכותרת */
 }
 
-.category-card-title:after {
+.category-card-title {
+  font-size: 22px;
+  color: #2c3e50;
+  font-weight: bold;
+  margin-top: 15px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  position: relative; /* נדרש לפס שיהיה מתחת לכותרת */
+}
+
+.category-card-title::after {
   content: "";
   position: absolute;
-  bottom: -5px; /* מתחת לכותרת */
+  bottom: 0;
   left: 0;
-  height: 2px;
-  width: 0%; /* מתחיל מ-0% */
-  background: linear-gradient(to right, rgba(52, 152, 219, 1), rgba(41, 128, 185, 1));
-  transition: width 1s ease; /* האנימציה של הרוחב במשך שנייה */
+  width: 0%;
+  height: 3px; /* גובה הפס */
+  background: linear-gradient(90deg, #3498db, #ff6347); /* גרדיאנט משתנה */
+  transition: width 0.6s ease, background 0.6s ease; /* איטיות ושינוי גרדיאנט */
 }
 
-.category-card:hover .category-card-title:after {
-  width: 100%; /* סיום האנימציה, הפס יתפשט על כל הרוחב */
+.category-card:hover .category-card-title::after {
+  width: 100%; /* ברגע שעוברים על הכרטיס, הפס יתפשט */
+  background: linear-gradient(90deg, #3498db, #ff6347,); /* שינוי הגרדיאנט */
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.category-card {
+  animation: slideInFromLeft 0.8s ease-out forwards;
+}
+.category-card {
+  background-color: #ffffff21;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  width: 300px;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.category-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* מעבר חלק */
+}
+
+.category-card:hover {
+  transform: scale(1.05); /* הגדלה ב-5% */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* הוספת צל חזק יותר */
 }
