@@ -2,8 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: calc(100vh - 50px);
-  max-width: 1074px; /* הגבלת רוחב למקסימום 1074px */
+  max-width: 1074px;
   margin: 0 auto;
   padding: 20px;
   background-color: #0000005e;
@@ -11,9 +12,104 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   overflow: hidden;
   margin-top: 2%;
+  position: relative;
 }
 
-iframe {
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* ספינר בצורת עיגול ריק עם מסגרת צבעונית */
+.loader {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 8px solid transparent;
+  border-top: 8px solid #001eff;
+  border-right: 8px solid #382baf;
+  border-bottom: 8px solid #150a7e;
+  border-left: 8px solid #3c1d84;
+  animation: spinWheel 2s infinite linear;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes spinWheel {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* כאשר הוידיאו נטען, מסתיר את הספינר */
+.video-container.loaded iframe {
+  opacity: 1;
+}
+
+.video-container.loaded .loader {
+  display: none;
+}
+
+.back-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  top: 30px;
+  left: 25%;
+  margin-right: 80%;
+  transform: translateX(-20%);
+}
+
+.back-button i {
+  margin-right: 10px;
+}
+
+/* התאמה למסכים קטנים יותר */
+@media screen and (max-width: 768px) {
+  .video-container {
+    height: 100vh;
+    max-width: 100%; /* מתאים את הקונטיינר לגודל המסך */
+    padding: 10px;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    height: 70vh;  }
+
+  iframe {
+    width: 100%; /* מתאים את הווידאו לרוחב המסך */
+    height: calc(100vw * 0.5625); /* גובה יחסי בהתאם ליחס 16:9 */
+  }
+
+  .back-button {
+    font-size: 16px;
+    top: 20px;
+    left: 10px;
+    margin-right: 0;
+    transform: none;
+  }
+
+  .loader {
+    width: 50px;
+    height: 50px;
+    border-width: 6px;
+  }
+}
+
+/* התאמה למסכים קטנים במיוחד (סמארטפונים) */
+@media screen and (max-width: 480px) {
+  .back-button {
+    font-size: 14px;
+  }
+
+  .loader {
+    width: 40px;
+    height: 40px;
+    border-width: 4px;
+  }
+  .video-container {
+
+    height: 60vh;  }
 }

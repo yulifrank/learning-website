@@ -1,18 +1,16 @@
 .about_all_page {
     width: 100%;
-    background-image: url('../../assets/Images/others.jpg');  /* תמונה ברקע */
+    background-image: url('../../assets/Images/others.jpg'); /* התמונה נשארת */
     background-size: cover;
     background-position: center;
     text-align: center;
-    
 }
-
 
 .about-container {
     margin: 50px auto;
     max-width: 100%;
     padding: 40px;
-    background-color: #f9f9f94b;
+    background-color: rgba(255, 255, 255, 0.384); /* לבן עם שקיפות */
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     direction: rtl;
@@ -22,10 +20,11 @@
     animation: slideIn 1s forwards;
     align-items: center;
 }
-.about-text{
-    max-width: 70%;
-    margin-left: 15%;
-    margin-right: 15%;
+
+.about-text {
+    max-width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 @keyframes slideIn {
@@ -37,7 +36,7 @@
 
 .about-container h1 {
     font-size: 32px;
-    color: #000158;
+    color: #1a2a8f; /* כחול כהה */
     font-weight: bold;
     text-align: center;
     margin-bottom: 10px;
@@ -45,7 +44,7 @@
 
 .about-container h2 {
     font-size: 24px;
-    color: #123253;
+    color: #5e2a92; /* סגלגל */
     margin-top: 30px;
     margin-bottom: 5px;
     font-weight: 600;
@@ -53,7 +52,7 @@
 
 .about-container p {
     font-size: 19px;
-    color: #141249;
+    color: #2e3a8c; /* כחול */
     line-height: 1.8;
     margin-bottom: 5px;
 }
@@ -66,33 +65,51 @@
 .about-container ul li {
     margin-bottom: 5px;
     font-size: 19px;
-    color: #08233e;
+    color: #34288f; /* כחול כהה יותר */
     line-height: 1.6;
 }
 
 .about-container a {
-    color: #000000;
+    color: #d1198c; /* ורוד כהה */
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 .about-container a:hover {
-    color: #1a53db;
+    color: #8a2abf; /* סגלגל בהיר */
     text-decoration: underline;
 }
 
 .about-container p a {
     font-weight: bold;
+}
 
+.gradient-text {
+    background: linear-gradient(45deg, #1a2a8f, #8a2abf, #d1198c); /* כחול לסגלגל לורוד */
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 3s infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 @media (max-width: 768px) {
     .about-container {
         padding: 20px;
         margin: 20px;
-        max-width: 90%; /* במכשירים קטנים יותר, להקטין את הרוחב */
-        background-size: cover; /* להתאים את התמונה בגודל אוטומטי */
+        max-width: 90%;
     }
     .about-container h1 {
         font-size: 28px;
@@ -104,28 +121,3 @@
         font-size: 16px;
     }
 }
-
-.gradient-text {
-    background: linear-gradient(45deg, #ff1500, #12048f, #42788a);
-    background-size: 200% 200%; /* מאפשר לגרדיאנט לזוז */
-    -webkit-background-clip: text; /* חיתוך לפי טקסט */
-    -webkit-text-fill-color: transparent; /* הסתרת הטקסט עצמו */
-    animation: gradient-animation 3s infinite; /* אנימציה מתמשכת */
-  }
-  
-  @keyframes gradient-animation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
-
-  
-  
-  

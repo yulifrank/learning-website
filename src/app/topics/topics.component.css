@@ -1,18 +1,6 @@
-.videos-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 0 30px;
-  margin-top: 7%;
-  direction: rtl;
-  animation: fadeIn 1s ease-in-out;
-  margin-right: 4%;
-  margin-left: 4%;
-}
 
 .video-card {
-  width: 23%;
+  width: 27%;
   cursor: pointer;
   border-radius: 12px;
   overflow: hidden;
@@ -23,9 +11,22 @@
   direction: rtl;
   opacity: 0;
   animation: fadeIn 0.8s forwards;
-    border: 17px solid;
-    border-image: linear-gradient(45deg, rgba(23, 10, 171, 0.811), rgba(80, 0, 54, 0.564)) 1; /* גרדיאנט מותאם */
+  border: 17px solid;
+  border-image: linear-gradient(45deg, rgba(23, 10, 171, 0.811), rgba(80, 0, 54, 0.564)) 1; /* גרדיאנט מותאם */
+}
 
+.videos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* מרכז את הכרטיסיות */
+  gap: 20px;
+  padding: 0 30px;
+  margin-top: 7%;
+  direction: rtl;
+  animation: fadeIn 1s ease-in-out;
+  margin-right: 4%;
+  margin-left: 4%;
+  align-content: center;  /* מרכז את התוכן כאשר הוא לא ממלא את כל השורה */
 }
 
 .video-card:hover {
@@ -120,4 +121,81 @@
 
 .all-card{
 background-color: #00000069;
+}
+/* עיצוב רספונסיבי לטלפון נייד */
+@media (max-width: 1268px) {
+  .videos-grid {
+    padding: 0 15px;  /* הקטנת רווחים */
+    margin-top: 15%;
+  }
+
+  .video-card {
+    width: 48%;  /* 2 סרטונים בשורה */
+  }
+
+  .video-title {
+    font-size: 1rem; /* להקטין גודל פונט */
+  }
+
+  .video-description {
+    font-size: 0.9rem; /* להקטין גודל פונט */
+  }
+
+  .category-thumbnail {
+    height: 100px; /* הקטנת גובה התמונה */
+  }
+}
+
+/* עיצוב רספונסיבי למסכים קטנים יותר (טלפון) */
+@media (max-width: 680px) {
+  .videos-grid {
+    padding: 0 10px;  /* הקטנת רווחים */
+    margin-top: 25%;
+  }
+
+  .video-card {
+    width: 100%;  /* כל הסרטונים בשורה אחת */
+    margin-bottom: 15px; /* להוסיף רווח בין כרטיסים */
+  }
+
+  .video-title {
+    font-size: 0.9rem; /* להקטין גודל פונט */
+  }
+
+  .video-description {
+    font-size: 0.8rem; /* להקטין גודל פונט */
+  }
+
+  .category-thumbnail {
+    height: 80px; /* הקטנת גובה התמונה */
+  }
+}
+
+
+@media (max-width: 1268px) {
+  .videos-grid {
+    padding: 0 15px;
+    margin-top: 15%;
+  }
+
+  .video-card {
+    width: 48%;  /* 2 סרטונים בשורה */
+  }
+
+  /* במקרה של כרטיס אחד או 3 כרטיסים בשורה */
+  .videos-grid {
+    justify-content: space-evenly; /* ישאיר רווחים שווים בצדדים */
+  }
+}
+
+@media (max-width: 680px) {
+  .videos-grid {
+    padding: 0 10px;
+    margin-top: 25%;
+  }
+
+  .video-card {
+    width: 100%; /* כל הסרטונים בשורה אחת */
+    margin-bottom: 15px;
+  }
 }

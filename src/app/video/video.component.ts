@@ -11,6 +11,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 export class VideoComponent implements OnInit {
   videoId: string = '';
   videoUrl: SafeResourceUrl = '';
+  
 
   constructor(private route: ActivatedRoute, private videoService: VideoService, private sanitizer: DomSanitizer) {}
 
@@ -20,4 +21,14 @@ export class VideoComponent implements OnInit {
       this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.videoId}`);
     });
   }
+  onVideoLoad() {
+    const videoContainer = document.querySelector('.video-container');
+    if (videoContainer) {
+      videoContainer.classList.add('loaded');
+    }
+  }
+  goBack() {
+    window.history.back();  // יחזיר את המשתמש לדף הקודם
+  }
+  
 }

@@ -30,15 +30,31 @@
 
 .menu li {
   margin: 0 20px;
-  position: relative; /* חשוב להוסיף position עבור האפקט */
+  position: relative;
 }
 
 .menu a {
   text-decoration: none;
   color: white;
   font-size: 18px;
+  display: flex;
+  align-items: center; /* אל תוודא שהאייקון והטקסט יהיו במרכז */
   transition: color 0.3s, transform 0.3s;
-  position: relative; /* להוסיף position */
+  position: relative;
+}
+
+.menu  i {
+  font-size: 15px; /* גודל האייקונים */
+  margin-left: 8px; /* מרווח בין הטקסט לאייקון */
+}
+.menu i {
+  font-size: 14px; /* גודל האייקונים */
+  margin-left: 8px; /* מרווח בין הטקסט לאייקון */
+  background-image: linear-gradient(130deg, #006eff, #e91e63); /* גרדיאנט בצבעים סגול, כחול, ורוד */
+  -webkit-background-clip: text; /* חשוב כדי שהגרדיאנט יופיע על האייקון */
+  color: transparent; /* האייקון יהיה שקוף כדי לראות את הגרדיאנט */
+  padding: 5px; /* רווח סביב האייקון */
+  border-radius: 50%; /* אם רוצים שהאייקון יהיה מעוגל */
 }
 
 .menu a::after {
@@ -47,18 +63,19 @@
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #ff6f61, #382baf); /* גרדיאנט צבעים */
-  transition: width 0.3s ease; /* אנימציה למעבר */
+  height: 1.5px;
+  background: linear-gradient(90deg, #ff6f61, #382baf);
+  transition: width 0.3s ease;
 }
 
+
+
 .menu a:hover {
-  color: #c7c2c2; /* צבע בזמן ריחוף */
-  transform: scale(1.1); /* אפקט התפשטות */
+  color: #c7c2c2;
 }
 
 .menu a:hover::after {
-  width: 100%; /* ברגע שמרחפים מעל, הקו יתפשט למלוא הרוחב */
+  width: 100%;
 }
 
 .credit {
@@ -73,35 +90,19 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.credit {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  color: white;
-  font-style: italic;
-  margin-right: 30px;
-}
-
 .credit-image {
-  width: 60px; /* גודל התמונה */
-  height: 60px; /* גובה התמונה */
-  border-radius: 50%; /* אם זו תמונה עגולה */
-  margin-right: 10px; /* רווח בין התמונה לטקסט */
-}
-.logo {
-  font-size: 26px;
-  font-weight: bold;
-  text-decoration: none;
-  letter-spacing: 1px;
-  position: relative; /* חשוב בשביל האפקט */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 .gradient-text {
   background: linear-gradient(45deg, #ff6f61, #382baf, #56ccf2);
-  background-size: 200% 200%; /* מאפשר לגרדיאנט לזוז */
-  -webkit-background-clip: text; /* חיתוך לפי טקסט */
-  -webkit-text-fill-color: transparent; /* הסתרת הטקסט עצמו */
-  animation: gradient-animation 3s infinite; /* אנימציה מתמשכת */
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation 3s infinite;
 }
 
 @keyframes gradient-animation {
@@ -116,4 +117,53 @@ body {
   }
 }
 
+/* עדכון ל- Responsiveness */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    width: 100%;
+    background-color: #00214d;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
 
+  .menu.open {
+    display: flex;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .menu-toggle:focus {
+    outline: none;
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}

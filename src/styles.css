@@ -1,14 +1,16 @@
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-html, body {
+  
+  html, body {
     height: 100%;
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
     background: linear-gradient(135deg, #000000, #0b1233, #1c4063, #38567a);
-    color: #ecf0f1; /* צבע טקסט בהיר כדי להחזיר את הקונטרסט */
+    color: #ecf0f1;
+    background-size: 100% 100%;  /* מוודא שהגרדיאנט יתפשט על כל הדף */
+    background-attachment: fixed; /* הגרדיאנט לא יתחדש בזמן הגלילה */
   }
+  
   html {
-    scroll-behavior: smooth; /* יגרום לגלילה להיות חלקה */
+    scroll-behavior: smooth;
   }
   

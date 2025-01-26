@@ -1,11 +1,20 @@
 <div class="video-container">
-    <iframe 
-      width="1074" 
-      height="604" 
-      [src]="videoUrl" 
-      title="Video Player" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
+  <!-- כפתור חזרה עם חץ -->
+  <button class="back-button" (click)="goBack()">
+    <i class="fas fa-arrow-left"></i> חזור
+  </button>
+
+  <!-- לודינג ספינר -->
+  <div class="loader"></div>
+
+  <iframe 
+    width="1074" 
+    height="604" 
+    [src]="videoUrl" 
+    title="Video Player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen
+    (load)="onVideoLoad()">
+  </iframe>
 </div>

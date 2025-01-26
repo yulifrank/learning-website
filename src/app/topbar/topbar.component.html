@@ -2,12 +2,16 @@
   <a routerLink="/" class="logo"> 
     <span class="gradient-text">Dev by Yael</span>
   </a>
-    <ul class="menu">
-    <li><a routerLink="/">בית</a></li>
-    <li><a routerLink="/about">אודות</a></li>
-    <li><a href="#contact">צור קשר</a></li> <!-- קישור לפוטר -->
+  <ul class="menu" [class.open]="menuOpen">
+    <li><a routerLink="/"> בית <i class="fas fa-home"></i></a></li>
+    <li><a routerLink="/about"> אודות <i class="fas fa-info-circle"></i></a></li>
+    <li><a href="#contact"> צור קשר <i class="fas fa-envelope"></i></a></li> <!-- קישור לפוטר -->
   </ul>
+  
   <div class="credit">
     <img src="../../assets/Images/others.jpg" alt="Logo" class="credit-image" />
   </div>
-  </nav>
+  <button class="menu-toggle" (click)="toggleMenu()">
+    <span class="hamburger-icon">&#9776;</span>
+  </button>
+</nav>
