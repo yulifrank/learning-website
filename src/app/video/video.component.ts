@@ -21,6 +21,7 @@ export class VideoComponent implements OnInit {
       this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.videoId}`);
     });
   }
+  
   onVideoLoad() {
     const videoContainer = document.querySelector('.video-container');
     if (videoContainer) {

@@ -11,7 +11,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   overflow: hidden;
-  margin-top: 2%;
+  margin-top: 5%;
   position: relative;
 }
 
@@ -57,10 +57,10 @@
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-  top: 30px;
+  top: 10px;
   left: 25%;
   margin-right: 80%;
-  transform: translateX(-20%);
+  transform: translateX(-10%);
 }
 
 .back-button i {
@@ -112,4 +112,54 @@
   .video-container {
 
     height: 60vh;  }
+}
+.video-actions {
+  display: flex;
+  justify-content: center; /* מרכז את הכפתורים */
+  align-items: center; /* מיישר אותם באופן מאוזן */
+  gap: 15px; /* רווח בין הכפתורים */
+  margin-top: 5px;
+}
+
+.action-button {
+  padding: 8px 16px;
+  border-radius: 25px; /* עיגול הקצוות כדי להיראות מודרני */
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  background-color: transparent; /* רקע שקוף */
+  transition: all 0.2s ease;
+  background: linear-gradient(to right, #2600ff, #901384); /* גרדיאנט צבע */
+  -webkit-background-clip: text; /* צביעת הטקסט בגרדיאנט */
+  color: transparent; /* צבע טקסט שקוף, כדי לחשוף את הגרדיאנט */
+  transition: all 0.5s ease; /* נוסיף מעבר איטי של 0.5 שניות */
+
+}
+
+
+.subscribe-button {
+  color: transparent; /* הצבע המקורי של הטקסט עבור כפתור הסאבסקראייב */
+  background: linear-gradient(to right, #fb00ff, #024c7e); /* גרדיאנט אדום */
+  -webkit-background-clip: text; /* צביעת הטקסט בגרדיאנט */
+}
+.action-button:hover {
+  color: transparent; /* נשאיר את הצבע שקוף */
+  background: linear-gradient(to right, #fb00ff, #024c7e); /* גרדיאנט אדום */
+  -webkit-background-clip: text; /* הגרדן ייחלף על הטקסט */
+
+}
+
+.subscribe-button:hover {
+  color: transparent; /* נשאיר את הצבע שקוף */
+  background: linear-gradient(to right, #2600ff, #901384); /* גרדיאנט צבע */
+  -webkit-background-clip: text;
+
+}
+
+/* אנימציה קטנה כשלוחצים על כפתור */
+.action-button:active {
+  transform: scale(0.98);
 }
