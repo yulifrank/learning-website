@@ -1,123 +1,154 @@
 .about_all_page {
     width: 100%;
-    background-image: url('../../assets/Images/others.jpg'); /* התמונה נשארת */
+    height: 100vh;
+    background-image: url('../../assets/Images/others.jpg');
     background-size: cover;
     background-position: center;
+    padding: 0;
     text-align: center;
+    position: relative;
+    overflow: hidden; /* מונע יציאה מגבולות התמונה */
 }
 
 .about-container {
-    margin: 50px auto;
-    max-width: 100%;
-    padding: 40px;
-    background-color: rgba(255, 255, 255, 0.384); /* לבן עם שקיפות */
-    border-radius: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #0078b07b, #9a348484);
+    border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    direction: rtl;
     font-family: 'Arial', sans-serif;
-    opacity: 0;
-    transform: translateX(-100%);
-    animation: slideIn 1s forwards;
+    color: #151392;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 0 20px; /* מוסיף רווחים בצדדים */
+}
+
+.about-header h1 {
+    font-size: 32px;
+    color: #502c9a;
+    margin-bottom: 20px;
 }
 
 .about-text {
-    max-width: 60%;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-top: 5%;
+    padding: 0 20%; /* רווח בצדדים */
 }
 
-@keyframes slideIn {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.about-container h1 {
-    font-size: 32px;
-    color: #1a2a8f; /* כחול כהה */
-    font-weight: bold;
-    text-align: center;
+.about-text h2 {
+    font-size: 24px;
+    color: #5d083f;
+    margin-top: 30px;
     margin-bottom: 10px;
 }
 
-.about-container h2 {
-    font-size: 24px;
-    color: #5e2a92; /* סגלגל */
-    margin-top: 30px;
-    margin-bottom: 5px;
-    font-weight: 600;
+.about-text p {
+    font-size: 18px;
+    color: #150044;
+    line-height: 1.6;
 }
 
-.about-container p {
-    font-size: 19px;
-    color: #2e3a8c; /* כחול */
-    line-height: 1.8;
-    margin-bottom: 5px;
-}
-
-.about-container ul {
+.about-text ul {
     list-style-type: none;
     padding: 0;
 }
 
-.about-container ul li {
-    margin-bottom: 5px;
-    font-size: 19px;
-    color: #34288f; /* כחול כהה יותר */
-    line-height: 1.6;
+.about-text ul li {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #150044;
 }
 
 .about-container a {
-    color: #d1198c; /* ורוד כהה */
+    color: #150044;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 .about-container a:hover {
-    color: #8a2abf; /* סגלגל בהיר */
+    color: #1e3a8a;
     text-decoration: underline;
 }
 
-.about-container p a {
+.contact-info p {
+    font-size: 18px;
+    color: #150044;
+}
+
+.contact-info a {
     font-weight: bold;
 }
 
-.gradient-text {
-    background: linear-gradient(45deg, #1a2a8f, #8a2abf, #d1198c); /* כחול לסגלגל לורוד */
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradient-animation 3s infinite;
-}
 
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
+/* Media Queries for Smaller Screens */
+@media (max-width: 1100px) {
+    .about-container {
+        padding: 15px;
+        margin: 10px;
+        top: 40px;
+        left: -44px;
 
+
+    }}
+/* Media Queries for Smaller Screens */
 @media (max-width: 768px) {
     .about-container {
-        padding: 20px;
-        margin: 20px;
-        max-width: 90%;
+        padding: 15px;
+        margin: 10px;
+        top: 30px;
+        left: -44px;
+
+
     }
-    .about-container h1 {
-        font-size: 28px;
+    .about-header h1 {
+        font-size: 2px;
     }
-    .about-container h2 {
-        font-size: 22px;
+    .about-text h2 {
+        font-size: 18px;
     }
-    .about-container p {
+    .about-text p {
+        font-size: 14px;
+    }
+    .about-text ul li {
+        font-size: 14px;
+    }
+    .about-text {
+        padding: 0 10%; /* יותר רווח בצדדים */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-header h1 {
+        font-size: 20px; /* צמצום הגודל לכותרות */
+
+    }
+    .about-text h2 {
         font-size: 16px;
+        margin-bottom: 3px;
+        margin-top: 3px;
+
+
+    }
+    .about-text p {
+        font-size: 14px;
+        padding-top: -3px; /* נותן רווח מעל התוכן */
+
+    }
+    .about-text ul li {
+        font-size: 14px;
+    }
+    .about-text {
+        padding: 0 5%; /* עוד יותר רווח בצדדים */
+
+    }
+    .about-container {
+        padding-top: 3px; /* נותן רווח מעל התוכן */
     }
 }
