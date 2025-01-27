@@ -119,6 +119,9 @@ body {
 
 /* עדכון ל- Responsiveness */
 @media (max-width: 768px) {
+  .gradient-text{
+    font-size: 22px;
+  }
   .menu {
     display: none;
     width: 100%;
@@ -156,6 +159,11 @@ body {
   .hamburger-icon {
     display: block;
   }
+  .credit-image {
+    width: 35px;
+    height: 35px;
+  margin-left: 90%;
+margin-top: 10%;}
 }
 
 @media (min-width: 769px) {

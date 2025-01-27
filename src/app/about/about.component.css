@@ -16,7 +16,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, #0078b07b, #9a348484);
+    background: linear-gradient(to right, #7dadc793, #bf51a7a4);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     font-family: 'Arial', sans-serif;
@@ -31,26 +31,30 @@
 }
 
 .about-header h1 {
-    font-size: 32px;
-    color: #502c9a;
+    color: #110070;
     margin-bottom: 20px;
 }
+.h1{
+    color: #110070;
 
+    font-size: 28px;
+
+}
 .about-text {
     margin-top: 5%;
     padding: 0 20%; /* רווח בצדדים */
 }
 
 .about-text h2 {
-    font-size: 24px;
-    color: #5d083f;
-    margin-top: 30px;
-    margin-bottom: 10px;
+    font-size: 25px;
+    color: #110070;
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
 
 .about-text p {
     font-size: 18px;
-    color: #150044;
+    color: #110070;
     line-height: 1.6;
 }
 
@@ -62,7 +66,7 @@
 .about-text ul li {
     margin-bottom: 15px;
     font-size: 18px;
-    color: #150044;
+    color: #110070;
 }
 
 .about-container a {
@@ -130,19 +134,19 @@
 
     }
     .about-text h2 {
-        font-size: 16px;
+        font-size: 13px;
         margin-bottom: 3px;
         margin-top: 3px;
 
 
     }
     .about-text p {
-        font-size: 14px;
+        font-size: 12px;
         padding-top: -3px; /* נותן רווח מעל התוכן */
 
     }
     .about-text ul li {
-        font-size: 14px;
+        font-size: 12px;
     }
     .about-text {
         padding: 0 5%; /* עוד יותר רווח בצדדים */
@@ -150,5 +154,7 @@
     }
     .about-container {
         padding-top: 3px; /* נותן רווח מעל התוכן */
+        margin-right: 10%;
+        margin-left: 8%;
     }
 }
