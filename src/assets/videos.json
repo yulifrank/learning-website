@@ -6,6 +6,12 @@
       "image": "../../assets/Images/Leonardo_Phoenix_09_A_visually_engaging_image_of_a_whiteboard_1 (1).jpg",
       "videos": [
         {
+          "title": "פתרון בעיה אלגוריתמית | תת-הסדרה עם סכום אפס ב-Python",
+          "description": "🔢 בואו ללמוד כיצד למצוא את תת-הסדרה הרציפה הארוכה ביותר במערך של מספרים שסכומה שווה לאפס! פתרון אלגוריתמי פשוט ויעיל ב-Python 🐍.",
+          "youtubeId": "Yj4esO0PQkE",
+          "imageUrl": "../../assets/Images/Leonardo_Phoenix_09_A_visually_engaging_image_of_a_whiteboard_1 (1).jpg"}
+          ,
+        {
           "title": "פתרון בעיות אלגוריתמיות | בדיקת תקינות סוגריים בעזרת מחסנית ב-Python",
           "description": "✨ האם מחרוזת של סוגריים תקינה? 🤔 בואו לגלות פתרון פשוט, חכם ומהיר לבעיה אלגוריתמית עם מחסנית (Stack) ב-Python! 🐍.",
           "youtubeId": "_a7faT0Cd8g",
