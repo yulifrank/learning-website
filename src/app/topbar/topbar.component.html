@@ -3,10 +3,10 @@
     <span class="gradient-text">Dev by Yael</span>
   </a>
   <ul class="menu" [class.open]="menuOpen">
-    <li><a href="#contact"> צור קשר <i class="fas fa-envelope"></i></a></li> <!-- קישור לפוטר -->
+    <li><a class="con-link"  (click)="scrollToContact()">צור קשר <i class="fas fa-envelope"></i></a></li>
     <li><a routerLink="/about"> אודות <i class="fas fa-info-circle"></i></a></li>
     <li><a routerLink="/"> בית <i class="fas fa-home"></i></a></li>
-    
+  
 
   </ul>
   

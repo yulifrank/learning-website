@@ -43,6 +43,9 @@
   position: relative;
 }
 
+.con-link{
+  cursor: pointer;
+}
 .menu  i {
   font-size: 15px; /* גודל האייקונים */
   margin-left: 8px; /* מרווח בין הטקסט לאייקון */
