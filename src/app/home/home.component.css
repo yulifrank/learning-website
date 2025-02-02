@@ -76,11 +76,12 @@
   flex-direction: column;
   justify-content: space-between;
   height: auto;
-  width: 300px;
+  width: 350px;
   max-width: 100%;
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  margin: 2px;
 }
 
 .category-card:hover {

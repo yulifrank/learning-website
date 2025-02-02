@@ -130,6 +130,20 @@
       ]
     },
     {
+      "name": "  Python | ניתוח רגשות   ",
+      "description": "בקטגוריה זו תלמדו איך להשתמש בספריית DeepFace לזיהוי וניתוח רגשות בתמונות בעזרת Python. 🤖🖼️💻",
+      "image": "../../assets/Images/py-df.jpg",
+      "videos": [
+        {
+          "title": "זיהוי וניתוח רגשות בתמונות עם DeepFace ב-Python",
+          "description": "איך לזהות ולהבין רגשות בתמונות באמצעות DeepFace ב-Python. 🔍🤖",
+          "youtubeId": "NxyQObSoo0Y",
+          "imageUrl": "../../assets/Images/py-df.jpg"
+        }
+      ]
+    }
+,    
+    {
       "name": "נושאים שונים",
       "description": "קטגוריה זו כוללת מגוון של נושאים שונים ומרתקים בעולם הנדסת התוכנה, אלגוריתמים וטכנולוגיות שונות.",
       "image": "../../assets/Images/computer.png",
