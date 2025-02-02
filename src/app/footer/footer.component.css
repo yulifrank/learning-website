@@ -115,23 +115,22 @@
 /* עיצוב ההודעות */
 .message {
   padding: 15px;
-  margin-top: 15px;
   border-radius: 5px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   font-weight: bold;
 }
 
 .success {
+  margin-top: 15px;
+
   background-color: #4caf50;
   color: white;
   border-left: 5px solid #388e3c;
 }
 
 .error {
-  background-color: #f44336;
-  color: white;
-  border-left: 5px solid #d32f2f;
+  color: rgb(255, 0, 0);
 }
 
 /* הודעת טעינה */
