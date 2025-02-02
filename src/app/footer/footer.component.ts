@@ -19,9 +19,25 @@ export class FooterComponent {
     emailjs.init('jlPoMcKqkYLC4kfyT'); // החלף ב-User ID שלך
   }
 
+  // פונקציה לאימות כתובת מייל תקינה
+  isValidEmail(email: string): boolean {
+    // תבנית רגולרית לבדוק אם המייל תואם לפורמט תקני
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailPattern.test(email);
+  }
   onSubmit(formData: any) {
-    this.loading = true; // הצגת הספינר
+    const email = formData.value.email;
   
+    // אם המייל לא תקין או לא תואם לתבנית של Angular
+    if (formData.controls.email.invalid) {
+      this.errorMessage = '❌ כתובת המייל אינה תקינה. אנא הזן מייל תקין.';
+      this.successMessage = '';  // נמחק את הודעת ההצלחה אם יש שגיאה
+      return;  // לא שולחים את המייל אם כתובת המייל אינה תקינה
+    }
+  
+    // אם המייל תקין, ממשיכים לשלוח את המייל
+    this.loading = true; // הצגת הספינר
+    
     const templateParams = {
       to_name: 'Yael Frank',
       from_name: formData.value.name,
@@ -34,7 +50,6 @@ export class FooterComponent {
     emailjs.send('service_grqe9ah', 'template_1izx1dj', templateParams)
       .then(() => {
         this.successMessage = 'ההודעה נשלחה בהצלחה!';
-        // הצגת ההודעה למשך 5 שניות ואז נעלמת
         setTimeout(() => {
           this.successMessage = '';
           this.loading = false;
@@ -47,7 +62,6 @@ export class FooterComponent {
           this.errorMessage = '';
           this.loading = false;
         }, 5000);
-
       })
       .finally(() => {
         this.loading = false; // הסתרת הספינר
@@ -70,5 +84,6 @@ export class FooterComponent {
     formData.reset();
   }
   
+  
+  
 }
-
