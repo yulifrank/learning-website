@@ -4,10 +4,11 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { QuoteComponent } from "../quotes/quotes.component";
 
 @Component({
   standalone:true,
-  imports:[CommonModule,MatCardModule, MatButtonModule],
+  imports: [CommonModule, MatCardModule, MatButtonModule, QuoteComponent],
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']

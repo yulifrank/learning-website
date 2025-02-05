@@ -1,0 +1,81 @@
+/* Container for the quote component */
+.quote-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    animation: fadeOutAndIn 6s ease-in-out infinite; /* הציטוט יתעמם ויתחיל מחדש כל 6 שניות */
+  }
+  
+  /* Quote box with no background, more subtle with shadow */
+  .quote-box {
+    text-align: center;
+    max-width: 100%;
+    direction: rtl; /* אם הציטוטים בעברית */
+    animation: fadeOutAndIn 6s ease-in-out infinite; /* האנימציה על הציטוט */
+  }
+  
+  /* Adding gradient to the quotes */
+  .quote-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff9d; /* White text for contrast against dark background */
+    line-height: 1.5;
+    font-style: italic; /* Italics for the author's name */
+    font-family: 'Georgia', serif; /* Beautiful font for emphasis */
+    margin: 0;
+    text-shadow:
+      2px 2px 5px rgb(0, 221, 255),
+      0px 0px 25px rgb(255, 0, 225),
+      0px 0px 50px rgb(100, 0, 200),
+      0px 0px 100px rgb(157, 6, 112);
+  }
+  
+  /* Adding gradient quotes */
+  .quote-text::before {
+    content: "“"; /* Opening quote */
+    font-size: 55px;
+    background: linear-gradient(135deg, #1a0c96, #9c1db8, #033e69);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-right: 10px;
+  }
+  
+  .quote-text::after {
+    content: "”"; /* Closing quote */
+    font-size: 55px;
+    background: linear-gradient(135deg, #2f00ff, #ae0fb9, #1d20b8);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-left: 10px;
+  }
+  
+  .quote-author {
+    font-size: 20px;
+    color: #ccc;
+    margin-top: 15px;
+    font-family: 'Arial', sans-serif;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.423);
+  }
+  
+  /* Smooth transition for changing quotes */
+  @keyframes fadeOutAndIn {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
