@@ -1,0 +1,169 @@
+  /* עיצוב הקונטיינר */
+  .container {
+    max-width: 70%;
+    margin: auto;
+    text-align: left;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 7%;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /* גרדיאנט לכותרות */
+  h1, h2, h3 {
+    background: linear-gradient(45deg, #06429d, #a91475, #03265c, #731630, #03265c, #0e070e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* עיצוב כרטיסים */
+  .text-box {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.077);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+    color: #a5acb7;
+    
+    /* שיפור הגופן */
+    font-family: 'Poppins', sans-serif; 
+    font-size: 18px; 
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+  }
+
+
+  .text-box:hover {
+    transform: scale(1.02);
+  }
+
+  /* כפתור */
+  button {
+    background: linear-gradient(45deg, rgba(23, 10, 171, 0.7), rgba(80, 0, 54, 0.8));
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+  }
+
+  /* עיצוב טופס */
+  .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .form-group label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffffff;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    background: rgba(255, 255, 255, 0.122);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #b1536e;
+    box-shadow: 0 0 10px rgba(199, 0, 57, 0.5);
+  }
+
+  /* סגנון ה- textarea עם כפתור ההעתקה בפנים */
+  .textarea-container {
+    position: relative;
+  }
+
+  .textarea-container textarea {
+    width: 100%;
+    padding-right: 40px; /* השארת מקום לכפתור */
+  }
+
+  .copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .copy-btn:hover mat-icon {
+    background: linear-gradient(45deg, #eaecefb0, #c32f59);
+    -webkit-background-clip: text;
+  }
+
+  @media (max-width: 768px) {
+    .form-row {
+      flex-direction: column;
+    }
+    .container {
+      max-width: 90%;
+      margin-top: 20%;
+    }
+
+  }
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.6); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 0.9; }
+  }
+  
+  /* ציר זמן */
+  .deadline-progress {
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .deadline-progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, #5f17b1, #81066e);
+    transition: width 0.5s ease-in-out;
+  }
+  
+  /* הודעה אם עבר הדדליין */
+  .deadline-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff4d4d;
+    text-align: center;
+    margin-top: 15px;
+  }
+    
+  .loading-animation {
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+

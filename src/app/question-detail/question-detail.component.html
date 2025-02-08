@@ -1,0 +1,77 @@
+<div class="container">
+  
+  <!-- תאריך יעד עם אנימציה -->
+    
+  <!-- ציר זמן שמראה כמה זמן נשאר -->
+  <div class="deadline-progress">
+    <div class="deadline-progress-bar" [ngStyle]="{ 'width': deadlineProgress + '%' }"></div>
+  </div>
+
+  <div class="deadline-container">
+    <p> מועד אחרון להגשה : <strong>1.3.2025</strong></p>
+    <div class="deadline-animation" *ngIf="!deadlinePassed"></div>
+  </div>
+
+  
+  <p class="deadline-message" *ngIf="deadlinePassed">
+    ⛔ The deadline has passed. No more submissions.
+  </p>
+  
+  <h1>{{ question.title }}</h1>
+
+  <mat-card class="text-box">
+    <h3><mat-icon>star</mat-icon> Difficulty Level</h3>
+    <p class="difficulty">{{ question.difficulty }}</p>
+  </mat-card>
+
+  <mat-card class="text-box">
+    <h3><mat-icon>description</mat-icon> Problem Description</h3>
+    <p class="description">{{ question.fullDescription }}</p>
+  </mat-card>
+
+  <mat-card class="text-box">
+    <h3><mat-icon>code</mat-icon> Example</h3>
+    <p class="example">{{ question.example }}</p>
+  </mat-card>
+
+  <button mat-button (click)="toggleForm()" class="toggle-form-btn" *ngIf="!deadlinePassed">
+    ➤ Submit Your Solution
+  </button>
+
+  <p class="deadline-message" *ngIf="deadlinePassed">
+    ⛔ The deadline for submission has passed. You can no longer submit a solution.
+  </p>
+
+  <form (ngSubmit)="sendSolution()" *ngIf="showForm && !deadlinePassed" class="form">
+    <div class="form-group">
+      <label for="firstname">First Name</label>
+      <input type="text" id="firstname" [(ngModel)]="firstName" name="firstName" required>
+    </div>
+
+    <div class="form-group">
+      <label for="lastname">Last Name</label>
+      <input type="text" id="lastname" [(ngModel)]="lastName" name="lastName" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" [(ngModel)]="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="userSolution">Paste Your Code Here</label>
+      <textarea id="userSolution" [(ngModel)]="userSolution" name="userSolution" rows="5" required></textarea>
+      <button type="button" (click)="copyCode()" class="copy-btn">
+        <mat-icon>content_copy</mat-icon>
+      </button>
+    </div>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="loading">
+      <span *ngIf="!loading">Submit Solution</span>
+      <span *ngIf="loading" class="loading-animation"> Sending...</span>
+    </button>
+    
+    <p class="success-message" *ngIf="successMessage">{{ successMessage }}</p>
+    <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
+  </form>
+</div>

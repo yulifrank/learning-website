@@ -8,6 +8,7 @@
     padding: 20px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
+    position: relative;
     animation: fadeOutAndIn 6s ease-in-out infinite; /* הציטוט יתעמם ויתחיל מחדש כל 6 שניות */
   }
   
@@ -16,7 +17,6 @@
     text-align: center;
     max-width: 100%;
     direction: rtl; /* אם הציטוטים בעברית */
-    animation: fadeOutAndIn 6s ease-in-out infinite; /* האנימציה על הציטוט */
   }
   
   /* Adding gradient to the quotes */
@@ -66,15 +66,15 @@
   /* Smooth transition for changing quotes */
   @keyframes fadeOutAndIn {
     0% {
-      opacity: 1;
+      opacity: 0;
       transform: translateY(0);
     }
     50% {
-      opacity: 0;
+      opacity: 1; /* הציטוט יתעמם לגמרי */
       transform: translateY(10px);
     }
     100% {
-      opacity: 1;
+      opacity: 0; /* הציטוט החדש עולה */
       transform: translateY(0);
     }
   }

@@ -1,0 +1,40 @@
+<div class="race-container">
+  <h1><mat-icon>rocket_launch</mat-icon> ברוכים הבאים לאתגר הקידוד הגדול!</h1>
+  <p>
+    האתגר הזה נועד למי שאוהב לפתור בעיות, לחשוב מחוץ לקופסה, ולשפר את יכולות התכנות שלו.  
+    כאן תמצאו מגוון שאלות אלגוריתמיות ברמות קושי שונות, וכל אחת מהן תעזור לכם לפתח חשיבה לוגית, יעילות קוד, ויכולות פתרון בעיות.
+  </p>
+
+  <h2><mat-icon>lightbulb</mat-icon> איך זה עובד?</h2>
+  <p>
+    - בכל שאלה עליכם למצוא פתרון אלגוריתמי נכון ויעיל.<br>
+    - ניתן להגיש פתרונות עד תאריך היעד, ולאחר מכן הם ייבדקו.<br>
+    - השאלות מדורגות לפי רמת קושי, ופתרון חכם במיוחד יכול להוביל אתכם לראש הטבלה!
+  </p>
+
+  <h2><mat-icon>emoji_events</mat-icon> תחרות ופרסום פתרונות מצטיינים!</h2>
+  <p>
+    - הפתרונות היעילים והחכמים ביותר ייבחרו ויפורסמו עם קרדיט לפותר!<br>
+    - זו ההזדמנות שלכם להוכיח את עצמכם, לבלוט, ולהראות לכולם איך כותבים קוד מנצח!  
+  </p>
+
+  <h2><mat-icon>trending_up</mat-icon> מה תרוויחו?</h2>
+  <p>
+    - שיפור החשיבה האלגוריתמית והיכולת לכתוב קוד יעיל יותר.<br>
+    - התנסות בבעיות אמיתיות שמתכנתים פותרים ביום-יום.<br>
+    - אתגר מהנה ומספק שידרבן אתכם ללמוד ולהשתפר!
+  </p>
+
+  <h2><mat-icon>arrow_downward</mat-icon> בחרו שאלה והתחילו לפתור!</h2>
+
+  <div class="cards-container">
+    <div *ngFor="let challenge of challenges" class="challenge-card">
+      <h2>{{ challenge.title }}</h2>
+      <p><strong>Difficulty:</strong> {{ challenge.difficulty }}</p>
+      <p>{{ challenge.shortDescription }}</p>
+      <button mat-raised-button color="primary" [routerLink]="['/coding-race', challenge.id]">
+        <mat-icon>search</mat-icon> View Question
+      </button>
+    </div>
+  </div>
+</div>

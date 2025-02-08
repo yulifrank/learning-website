@@ -33,6 +33,6 @@ export class QuoteComponent implements OnInit {
   ngOnInit(): void {
     setInterval(() => {
       this.currentQuote = (this.currentQuote + 1) % this.quotes.length;
-    }, 6000); // change quote every 6 seconds
+    }, 5000); // change quote every 6 seconds
   }
 }
