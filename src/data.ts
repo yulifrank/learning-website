@@ -40,6 +40,28 @@ export const codingChallenges = [
         `
       },
       {
+        firstName: 'R',
+        lastName: 'Mitelman',
+        code: `
+static int[] FindPair(int[] nums, int target)
+  {
+     HashSet<int> numbersSet = new HashSet<int>();
+     
+     foreach (int num in nums)
+     {
+         int complement = target - num;
+         if (numbersSet.Contains(complement))
+         {
+             return new int[] { complement, num }; // מחזיר את הזוג שמצאנו
+         }
+         numbersSet.Add(num);
+  }
+      
+      return new int[0]; 
+  }
+`
+      },
+      {
         firstName: 'Chaya',
         lastName: 'Avramovitz',
         code: `

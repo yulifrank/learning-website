@@ -1,8 +1,13 @@
 <div id="top"></div>
 
+
 <div class="container">
+  <button  (click)="goBack()" class="back-button">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
   <button class="solutions-btn" *ngIf="question.suggestedSolutions && question.suggestedSolutions.length > 0" mat-button [routerLink]="['/solution', question.id]">
 פתרונות שהוגשו </button>
+
   
   
   <!-- תאריך יעד עם אנימציה -->

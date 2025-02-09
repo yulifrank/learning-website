@@ -184,3 +184,16 @@
     100% { opacity: 1; }
   }
 
+  .back-button {
+    background: none; /* מסיר את הרקע */
+    border: none;     /* מסיר את המסגרת */
+    padding: 0;       /* מסיר ריפוד נוסף */
+    color: white;     /* צבע החץ הלבן */
+    font-size: 24px;  /* גודל החץ */
+    top: 1%;
+    left: 5%;
+    z-index: 1000;    /* לוודא שהכפתור יהיה מעל כל התוכן */
+    cursor: pointer;
+    margin-bottom: 2%;
+
+  }

@@ -5,6 +5,8 @@ import { ActivatedRoute } from '@angular/router';
 import { codingChallenges } from '../../data'; // יש להחליף בנתיב המתאים לקובץ הנתונים
 import { MatOption } from '@angular/material/core';
 import { MatIcon } from '@angular/material/icon';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-solution-list',
@@ -16,7 +18,7 @@ import { MatIcon } from '@angular/material/icon';
 export class SolutionListComponent implements OnInit {
   solutions: any[] = [];
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute,private location: Location) {}
 
   ngOnInit(): void {
     // שליפת ה-ID של השאלה
@@ -25,7 +27,12 @@ export class SolutionListComponent implements OnInit {
 
     this.getSolutions(questionId);
   }
+  
 
+  goBack(): void {
+    this.location.back();
+  }
+  
   getSolutions(questionId: number): void {
     console.log('codingChallenges:', codingChallenges); // הדפס את כל אתגרי הקידוד לקונסול
 

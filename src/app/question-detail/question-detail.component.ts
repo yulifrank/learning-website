@@ -10,6 +10,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@mui/icons-material';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-question-detail',
@@ -43,7 +45,7 @@ export class QuestionDetailComponent {
   deadlineDate: Date = new Date(2025, 2, 1); // March is month 2
   startDate: Date = new Date(2025, 1, 1); // February is month 1
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute ,private location: Location) {
     this.deadlinePassed = new Date() > this.deadlineDate;
 
     const totalDuration = this.deadlineDate.getTime() - this.startDate.getTime();
@@ -122,4 +124,8 @@ export class QuestionDetailComponent {
       setTimeout(() => this.errorMessage = '', 3000);
     }
   }
+  goBack(): void {
+    this.location.back();
+  }
+  
 }
