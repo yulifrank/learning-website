@@ -110,7 +110,28 @@ def can_be_polindrom(string):
     shortDescription: 'Sort words in a sentence alphabetically.',
     fullDescription: 'Write a function that takes a sentence and returns the words sorted alphabetically while keeping punctuation intact. Spaces between words should be normalized, and the order of words should be case-insensitive.',
     example: 'Input: "Banana apple! cherry"  Output: "apple Banana cherry!"',
-    suggestedSolutions: []
+    suggestedSolutions: [
+      {
+        firstName: 'Ayala',
+        lastName: 'Y',
+        email: 'a83245064@gmail.com',
+        code: `
+import re
+
+def sort_words(sentence):
+    # Normalize spaces
+    normalized_sentence = ' '.join(sentence.split())
+    
+    # Extract words and keep punctuation
+    words = re.findall(r'\\b\\w+\\b|[^\\w\\s]', normalized_sentence)
+    
+    # Sort words case-insensitively
+    sorted_words = sorted(words, key=lambda x: x.lower())
+    
+    return ' '.join(sorted_words)
+        `
+      }
+    ]
   },
   {
     id: 4,
@@ -163,5 +184,30 @@ print(format_date("2024-02-15"))  # Output: "Yesterday"
         `
       }
     ]
+  },
+  {
+    firstName: 'Ayala',
+    lastName: 'Y',
+    email: 'a83245064@gmail.com',
+    code: `
+from datetime import datetime, timedelta
+
+def readable_date(date_str):
+# Parse the input date string
+input_date = datetime.strptime(date_str, "%Y-%m-%d").date()
+today = datetime.today().date()
+yesterday = today - timedelta(days=1)
+
+# Check for today or yesterday
+if input_date == today:
+    return "Today"
+elif input_date == yesterday:
+    return "Yesterday"
+else:
+    # Format the date for other cases
+    return input_date.strftime("%-d{} of %B, %Y").format(
+        "th" if 11 <= input_date.day <= 13 else {1: "st", 2: "nd", 3: "rd"}.get(input_date.day % 10, "th")
+    )
+    `
   }
 ];

@@ -41,7 +41,7 @@ export class SolutionListComponent implements OnInit {
     console.log('Question found:', question); // הדפס את השאלה שנמצאה לפי ה-ID
 
     if (question) {
-      this.solutions = question.suggestedSolutions;
+      this.solutions = question.suggestedSolutions ?? [];
       console.log('Suggested Solutions:', this.solutions); // הדפס את הפתרונות שהתקבלו
     } else {
       console.log('No question found with ID:', questionId); // הדפס אם לא נמצאה שאלה עם ה-ID הזה
