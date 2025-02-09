@@ -78,6 +78,7 @@ static int[] FindPair(int[] nums, int target)
     ]
   }
 ,  
+
   {
     id: 2,
     title: 'Is a Rotated Palindrome?',
@@ -85,8 +86,23 @@ static int[] FindPair(int[] nums, int target)
     shortDescription: 'Check if a string can become a palindrome by rotating it.',
     fullDescription: 'A rotated palindrome is a string that can be rearranged through rotation to form a palindrome. Write a function that checks whether a given string can become a palindrome by rotating its characters. The function should ignore spaces and be case-insensitive.',
     example: 'Input: "aab"  Output: true (because "aba" is a palindrome)',
-    suggestedSolutions: []
+    suggestedSolutions: [
+      {
+        firstName: 'Malki',
+        lastName: 'Marxon',
+        email: 'malkim1844@gmail.com',
+        code: `
+from collections import Counter
+
+def can_be_polindrom(string):
+    count_char = Counter(string)
+    count_odd_chars = sum(1 for count_char in count_char.values() if count_char % 2 != 0)
+    return count_odd_chars <= 1
+        `
+      }
+    ]
   },
+
   {
     id: 3,
     title: 'Rearrange Words Alphabetically',
