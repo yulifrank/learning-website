@@ -88,7 +88,7 @@ static int[] FindPair(int[] nums, int target)
     example: 'Input: "aab"  Output: true (because "aba" is a palindrome)',
     suggestedSolutions: [
       {
-        firstName: 'Malki',
+        firstName: 'M',
         lastName: 'Marxon',
         email: 'malkim1844@gmail.com',
         code: `
