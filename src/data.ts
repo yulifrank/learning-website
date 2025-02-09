@@ -11,36 +11,51 @@ export const codingChallenges = [
         firstName: 'Shira',
         lastName: 'Ytzkowits',
         code: `
-def find_pair_with_sum(arr, target):
-    seen = set()
-    for num in arr:
-        complement = target - num
-        if complement in seen:
-            return [complement, num]
-        seen.add(num)
-    return []  # Return an empty list if no pair is found
-
-# Example Usage
-arr = [4, 7, 1, -3, 2]
-target = 5
-print(find_pair_with_sum(arr, target))  # Output: [4, 1]
+  def find_pair_with_sum(arr, target):
+      seen = set()
+      for num in arr:
+          complement = target - num
+          if complement in seen:
+              return [complement, num]
+          seen.add(num)
+      return []  # Return an empty list if no pair is found
+  
+  # Example Usage
+  arr = [4, 7, 1, -3, 2]
+  target = 5
+  print(find_pair_with_sum(arr, target))  # Output: [4, 1]
         `
       },
       {
         firstName: 'Rebeka',
         lastName: 'Tolidano',
         code: `
-def return_pair_to_target(target, array):
-    dict = {}
-    for num in array:
-        complement = target - num
-        if complement in dict:
-            return [complement, num]
-        dict[num] = 1
+  def return_pair_to_target(target, array):
+      dict = {}
+      for num in array:
+          complement = target - num
+          if complement in dict:
+              return [complement, num]
+          dict[num] = 1
+        `
+      },
+      {
+        firstName: 'Chaya',
+        lastName: 'Avramovitz',
+        code: `
+  def find_sum_pair(nums, target_sum):
+      seen_elements = {}
+      for number in nums:
+          diff = target_sum - number
+          if diff in seen_elements:
+              return [diff, number]
+          seen_elements[number] = True
+      return []  # No pair found
         `
       }
     ]
-  },
+  }
+,  
   {
     id: 2,
     title: 'Is a Rotated Palindrome?',

@@ -47,18 +47,21 @@
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25%, 3fr));
-  gap: 20px;
+  gap: 50px;
   justify-content: space-around;
   margin-top: 30px;
+  margin-left: 7%;
+  margin-right: 7%;
+
   
 }
 
 /* כרטיסי האתגר */
 .challenge-card {
-  padding: 20px;
+  padding: 10px;
   border-radius: 20px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.237);
   backdrop-filter: blur(15px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -107,14 +110,13 @@
 
 /* אפקט ריחוף על הכרטיסים */
 .challenge-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.584);
 
 }
 
 /* כפתורים */
 button {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(200, 200, 200, 0.4));
+  background: linear-gradient(135deg, rgba(3, 38, 94, 0.301), rgba(79, 9, 67, 0.34));
   color: white;
   padding: 12px 20px;
   border: none;
@@ -132,8 +134,8 @@ button {
   margin-bottom: 2%;
 }
 button:hover {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(200, 200, 200, 0.6));
-  transform: scale(1.05);
+  background: linear-gradient(135deg, rgba(3, 38, 94, 0.407), rgba(79, 9, 67, 0.456));
+  transform: scale(1.01);
 }
 
 /* אפקט כניסה */
@@ -233,5 +235,30 @@ flex-wrap: wrap;
   margin-top: auto; /* מבטיח שהכפתור יהיה בתחתית */
   align-self: center;
   width: 80%;
+}
+
+/* טקסטים */
+.text-container p {
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 60%;
+  margin: 0 auto 20px;
+  text-align: right; /* מיושר לימין */
+  margin-right: 5%;
+
+}
+
+/* כותרות */
+.race-container h1, .race-container h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.text-container{
+  margin-right: 20%;
+  text-align: right; /* מיושר לימין */
+
+
 }
 

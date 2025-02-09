@@ -14,4 +14,8 @@ import { MatIcon } from '@angular/material/icon';
 })
 export class CodingRaceComponent {
   challenges = codingChallenges;
+  scrollToTop() {
+    window.scrollTo(0, 0); // גלילה לראש העמוד
+  }
+  
 }

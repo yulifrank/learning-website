@@ -1,29 +1,33 @@
 <div class="race-container">
+  <div class="text-container">
   <h1><mat-icon>rocket_launch</mat-icon> ברוכים הבאים לאתגר הקידוד הגדול!</h1>
   <p>
     האתגר הזה נועד למי שאוהב לפתור בעיות, לחשוב מחוץ לקופסה, ולשפר את יכולות התכנות שלו.  
     כאן תמצאו מגוון שאלות אלגוריתמיות ברמות קושי שונות, וכל אחת מהן תעזור לכם לפתח חשיבה לוגית, יעילות קוד, ויכולות פתרון בעיות.
   </p>
 
-  <h2><mat-icon>lightbulb</mat-icon> איך זה עובד?</h2>
+  <h2><mat-icon>help_outline</mat-icon> איך זה עובד?</h2>
   <p>
-    - בכל שאלה עליכם למצוא פתרון אלגוריתמי נכון ויעיל.<br>
-    - ניתן להגיש פתרונות עד תאריך היעד, ולאחר מכן הם ייבדקו.<br>
-    - השאלות מדורגות לפי רמת קושי, ופתרון חכם במיוחד יכול להוביל אתכם לראש הטבלה!
+    <mat-icon>code</mat-icon>  בכל שאלה עליכם למצוא פתרון אלגוריתמי נכון ויעיל.<br>
+    <mat-icon>calendar_today</mat-icon>  ניתן להגיש פתרונות עד תאריך היעד, ולאחר מכן הם ייבדקו.<br>
+    <mat-icon>bar_chart</mat-icon>  השאלות מדורגות לפי רמת קושי, ופתרון חכם במיוחד יכול להוביל אתכם לראש הטבלה!
   </p>
 
   <h2><mat-icon>emoji_events</mat-icon> תחרות ופרסום פתרונות מצטיינים!</h2>
   <p>
-    - הפתרונות היעילים והחכמים ביותר ייבחרו ויפורסמו עם קרדיט לפותר!<br>
-    - זו ההזדמנות שלכם להוכיח את עצמכם, לבלוט, ולהראות לכולם איך כותבים קוד מנצח!  
+    <mat-icon>emoji_events</mat-icon> הפתרונות היעילים והחכמים ביותר ייבחרו ויפורסמו עם קרדיט לפותר!
+    <br>
+    <mat-icon>star</mat-icon> - זו ההזדמנות שלכם להוכיח את עצמכם, לבלוט, ולהראות לכולם איך כותבים קוד מנצח!  
   </p>
+  
 
-  <h2><mat-icon>trending_up</mat-icon> מה תרוויחו?</h2>
+  <h2><mat-icon>school</mat-icon> מה תרוויחו?</h2>
   <p>
-    - שיפור החשיבה האלגוריתמית והיכולת לכתוב קוד יעיל יותר.<br>
-    - התנסות בבעיות אמיתיות שמתכנתים פותרים ביום-יום.<br>
-    - אתגר מהנה ומספק שידרבן אתכם ללמוד ולהשתפר!
+    <mat-icon>lightbulb</mat-icon>  שיפור החשיבה האלגוריתמית והיכולת לכתוב קוד יעיל יותר.<br>
+    <mat-icon>work</mat-icon>  התנסות בבעיות אמיתיות שמתכנתים פותרים ביום-יום.<br>
+    <mat-icon>check_circle</mat-icon> אתגר מהנה ומספק שידרבן אתכם ללמוד ולהשתפר!
   </p>
+</div>
 
   <h2><mat-icon>arrow_downward</mat-icon> בחרו שאלה והתחילו לפתור!</h2>
 
@@ -32,9 +36,14 @@
       <h2>{{ challenge.title }}</h2>
       <p><strong>Difficulty:</strong> {{ challenge.difficulty }}</p>
       <p>{{ challenge.shortDescription }}</p>
-      <button mat-raised-button color="primary" [routerLink]="['/coding-race', challenge.id]">
-        <mat-icon>search</mat-icon> View Question
+      <button mat-raised-button color="primary" [routerLink]="['/coding-race', challenge.id]" fragment="top" (click)="scrollToTop()">
+        <mat-icon>search</mat-icon> לאתגר...
       </button>
+      <button class="solutions-btn" *ngIf="challenge.suggestedSolutions && challenge.suggestedSolutions.length > 0" mat-button [routerLink]="['/solution', challenge.id]" (click)="scrollToTop()">
+        <mat-icon>assignment_turned_in</mat-icon> צפיה בפתרונות
+      </button>
+      
+      
     </div>
   </div>
 </div>
