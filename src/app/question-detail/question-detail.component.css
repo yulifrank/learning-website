@@ -12,7 +12,7 @@
 
   /* גרדיאנט לכותרות */
   h1, h2, h3 {
-    background: linear-gradient(45deg, #06429d, #a91475, #03265c, #731630, #03265c, #0e070e);
+    background: linear-gradient(45deg, #06429d, #a91475);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

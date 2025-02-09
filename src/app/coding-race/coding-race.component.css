@@ -20,7 +20,7 @@
 
 .race-container h1 {
   font-size: 12%;
-  background: linear-gradient(45deg, #ff00aeae, #0e11c7);
+  background: linear-gradient(45deg, #dc0999d3, #3537b9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 15px;
@@ -61,7 +61,7 @@
   padding: 10px;
   border-radius: 20px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.237);
+  background: rgba(255, 255, 255, 0.647);
   backdrop-filter: blur(15px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -84,22 +84,33 @@
   bottom: -3px;
   border-radius: 20px;
   padding: 6px;
-  background: linear-gradient(90deg, #700f70a8, #3b0f7eb8, #0d51b89a);
+  background: linear-gradient(90deg, #c813c8c9, #3b0f7eb8, #0d51b89a);
   -webkit-mask: linear-gradient(white, white) content-box, linear-gradient(white, white);
+  
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   z-index: -1;
 }
-
 /* כותרות כרטיסים */
 .challenge-card h2 {
   font-size: clamp(18px, 3vw, 24px);
   font-weight: 600;
   margin-bottom: 8px;
-  background: linear-gradient(45deg, #06429d, #831568, rgb(1, 78, 195));
+  background: linear-gradient(45deg, #ffffffc4,#9d98989a, #cecdcd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 1px white, -1px -1px 2px rgb(255, 255, 255), 1px -1px 2px c30994, -1px 1px 2px 0066ffc4;
 }
+
+/* עבור כל האייקונים */
+.mat-icon-wrapper {
+  background: linear-gradient(45deg, #cc269de0, #4679ee); /* ורוד, כחול, סגול */
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 30px;
+}
+
+
 
 /* טקסט בכרטיסים */
 .challenge-card p {
