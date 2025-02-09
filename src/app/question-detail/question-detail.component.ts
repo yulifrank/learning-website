@@ -1,5 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { codingChallenges } from '../../data';
 import Emailjs from 'emailjs-com';
 import { FormsModule } from '@angular/forms';
@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { Router } from '@mui/icons-material';
 
 @Component({
   selector: 'app-question-detail',
@@ -21,6 +22,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatCardModule,
     MatFormFieldModule,
     MatIconModule,
+    RouterModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './question-detail.component.html',

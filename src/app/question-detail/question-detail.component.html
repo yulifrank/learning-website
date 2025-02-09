@@ -1,4 +1,7 @@
 <div class="container">
+  <button class="solutions-btn" *ngIf="question.suggestedSolutions && question.suggestedSolutions.length > 0" mat-button [routerLink]="['/solution', question.id]">
+פתרונות שהוגשו </button>
+  
   
   <!-- תאריך יעד עם אנימציה -->
     
@@ -74,4 +77,5 @@
     <p class="success-message" *ngIf="successMessage">{{ successMessage }}</p>
     <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
   </form>
+  
 </div>

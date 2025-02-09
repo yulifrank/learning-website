@@ -1,0 +1,177 @@
+/* עבור הודעה שאין פתרונות */
+.no-solutions-message {
+    text-align: center;
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: bold;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 2px solid transparent;
+    background-image: linear-gradient(45deg, #170683, #6f1845);
+    background-clip: padding-box;
+    margin-top: 50px;
+}
+
+/* כותרת */
+.title {
+    text-align: center;
+    font-size: 2em;
+    color: #ab20888f;
+    font-weight: bold;
+    margin-top: 7%;
+    margin-bottom: 3%;
+}
+
+/* עבור קונטיינר של כל הפתרונות */
+.solutions-container {
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto; /* ממקם את התוכן במרכז */
+    justify-items: center; /* ממקם את הכרטיסים במרכז */
+    display: flex;
+    justify-content: center;
+}
+
+/* עבור כרטיס הפתרון */
+.solution-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* עיצוב כרטיס הפתרון */
+.solution-card {
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    height: 400px;
+    width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #34495e;
+    color: rgb(40, 1, 40);
+    margin: 2%;
+}
+
+/* אפקט על-hover */
+.solution-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* כותרת הכרטיס */
+.solution-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* עיצוב קוד הפתרון */
+.solution-code {
+    background-color: #2c3e50;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 0.95em;
+    color: #ecf0f1;
+    height: 250px;
+    overflow-y: auto;
+    border: 1px solid #95a5a6;
+}
+
+/* כפתור Copy Code */
+.copy-btn {
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    padding: 8px;
+    transition: transform 0.3s ease, background 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(135deg, #082a65, #9e1599);
+    border: none;
+}
+
+/* כפתור Copy Code */
+.copy-btn {
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    padding: 8px;
+    transition: transform 0.3s ease, background 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(135deg, #082a65, #9e1599);
+    border: none;
+}
+
+/* אייקון של ה-Copy */
+.copy-btn mat-icon {
+    font-size: 1.4em;
+    color: white;
+}
+
+/* אייקון של וי אחרי העתקה */
+.copy-btn .check_circle {
+    color: #f8f8f8;
+}
+
+/* הודעה לאחר ההעתקה */
+.copy-message {
+    text-align: right;
+    font-size: 0.8em;
+    color: #eeeeee;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+/* הוספת אנימציה לכרטיסים בעת טעינה */
+.solution-card-container {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* רספונסיביות - צמצום שורות במסכים קטנים יותר */
+@media (max-width: 768px) {
+    .title {
+        margin-top: 20%;
+    }
+    .solutions-container {
+display: flex;  
+flex-direction: column;
+  }
+  .solutions-btn{
+    width: 10%;
+  }
+}
+
+/* פתרון אם יש בדיוק שני כרטיסים */
+@media (min-width: 768px) and (max-width: 1200px) {
+    .solutions-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+        
+    }
+    .title {
+        margin-top: 10%;
+    }
+    .solution-card-container {
+        width: 45%; /* אם יש רק שני פתרונות */
+    }
+}
