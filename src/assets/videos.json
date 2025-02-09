@@ -1,5 +1,43 @@
 {
   "categories": [
+
+    {
+      "name": "   לניהול הזמנות API  בניית ",
+      "description": "כאן תלמדו איך לבנות מערכת API בצד שרת בעזרת .NET ואנגולר בצד הלקוח. זהו תהליך של יצירת קונטרולרים, מודלים, והגדרות חיבור בין השרת ללקוח.",
+      "image": "../../assets/Images/api.jpg",
+      "videos": [
+        {
+          "title": "מדריך מתחילים: 🚀 בניית מערכת API עם .NET ואנגולר - חלק א' יצירת מודלים",
+          "description": "ברוכים הבאים לסרטון הראשון בסדרה שלנו על בניית מערכת פשוטה שמחברת בין צד שרת ב-.NET לבין צד לקוח ב-Angular! 🚀.",
+          "youtubeId": "soMx--EoaoA",
+          "imageUrl": "../../assets/Images/api.jpg"
+        },
+        {
+          "title": "מדריך מתחילים: 🚀 בניית מערכת API עם .NET ואנגולר - חלק ב' בניית API",
+          "description": "בסרטון הזה נתקדם לשלב הבא ונבנה את הקונטרולר הראשון שלנו ב-API.",
+          "youtubeId": "f6ppB5vmx6k",
+          "imageUrl": "../../assets/Images/api.jpg"
+        },
+        {
+          "title": "מדריך מתחילים: 🚀 בניית מערכת API עם .NET ואנגולר - חלק ג' בניית בסיס לאפליקציה עם Angular",
+          "description": "ברוכים הבאים לסרטון השלישי בסדרה! 🚀 הפעם אנחנו עוברים לעבודה בצד הלקוח ונבנה אפליקציה מבוססת Angular.",
+          "youtubeId": "PwrkZkurkLE",
+          "imageUrl": "../../assets/Images/api.jpg"
+        },
+        {
+          "title": "מדריך מתחילים: 🚀 בניית מערכת API עם .NET ואנגולר - חלק ד' תקשורת עם השרת",
+          "description": "ברוכים הבאים לסרטון הרביעי בסדרה! 🌐 בסרטון הזה נתחיל ליצור חיבור אמיתי בין אפליקציית ה-Angular שלנו ל-API שיצרנו.",
+          "youtubeId": "J-m5f2spVZw",
+          "imageUrl": "../../assets/Images/api.jpg"
+        },
+        {
+          "title": "מדריך מתחילים: 🚀 בניית מערכת API עם .NET ואנגולר - חלק ה' תקשורת עם השרת",
+          "description": "ברוכים הבאים לסרטון החמישי בסדרה! 🌐 בסרטון הזה נתחיל ליצור חיבור אמיתי בין אפליקציית ה-Angular שלנו ל-API שיצרנו.",
+          "youtubeId": "CZFWES0BBJI",
+          "imageUrl": "../../assets/Images/api.jpg"
+        }
+      ]
+    },
     {
       "name": "שאלות באלגוריתמים",
       "description": "קטגוריה זו כוללת שאלות ופתרונות אלגוריתמיים שיכולים לעזור לכם להבין ולפתור בעיות בצורה יעילה ובמהירות. כאן תמצאו את כל מה שקשור לאלגוריתמים, כולל מחסניות, אלגוריתמים דינאמיים, ועוד.",
@@ -68,45 +106,8 @@
       ]
     },
     {
-      "name": "   לניהול הזמנות API  בניית ",
-      "description": "כאן תלמדו איך לבנות מערכת API בצד שרת בעזרת .NET ואנגולר בצד הלקוח. זהו תהליך של יצירת קונטרולרים, מודלים, והגדרות חיבור בין השרת ללקוח.",
-      "image": "../../assets/Images/api.jpg",
-      "videos": [
-        {
-          "title": "מדריך מתחילים: 🚀 בניית מערכת API עם .NET ואנגולר - חלק א' יצירת מודלים",
-          "description": "ברוכים הבאים לסרטון הראשון בסדרה שלנו על בניית מערכת פשוטה שמחברת בין צד שרת ב-.NET לבין צד לקוח ב-Angular! 🚀.",
-          "youtubeId": "soMx--EoaoA",
-          "imageUrl": "../../assets/Images/api.jpg"
-        },
-        {
-          "title": "מדריך מתחילים: 🚀 בניית מערכת API עם .NET ואנגולר - חלק ב' בניית API",
-          "description": "בסרטון הזה נתקדם לשלב הבא ונבנה את הקונטרולר הראשון שלנו ב-API.",
-          "youtubeId": "f6ppB5vmx6k",
-          "imageUrl": "../../assets/Images/api.jpg"
-        },
-        {
-          "title": "מדריך מתחילים: 🚀 בניית מערכת API עם .NET ואנגולר - חלק ג' בניית בסיס לאפליקציה עם Angular",
-          "description": "ברוכים הבאים לסרטון השלישי בסדרה! 🚀 הפעם אנחנו עוברים לעבודה בצד הלקוח ונבנה אפליקציה מבוססת Angular.",
-          "youtubeId": "PwrkZkurkLE",
-          "imageUrl": "../../assets/Images/api.jpg"
-        },
-        {
-          "title": "מדריך מתחילים: 🚀 בניית מערכת API עם .NET ואנגולר - חלק ד' תקשורת עם השרת",
-          "description": "ברוכים הבאים לסרטון הרביעי בסדרה! 🌐 בסרטון הזה נתחיל ליצור חיבור אמיתי בין אפליקציית ה-Angular שלנו ל-API שיצרנו.",
-          "youtubeId": "J-m5f2spVZw",
-          "imageUrl": "../../assets/Images/api.jpg"
-        },
-        {
-          "title": "מדריך מתחילים: 🚀 בניית מערכת API עם .NET ואנגולר - חלק ה' תקשורת עם השרת",
-          "description": "ברוכים הבאים לסרטון החמישי בסדרה! 🌐 בסרטון הזה נתחיל ליצור חיבור אמיתי בין אפליקציית ה-Angular שלנו ל-API שיצרנו.",
-          "youtubeId": "CZFWES0BBJI",
-          "imageUrl": "../../assets/Images/api.jpg"
-        }
-      ]
-    },
-    {
       "name": "בינה מלאכותית",
-      "description": "בקטגוריה זו תמצאו נושאים שונים בתחום הבינה המלאכותית: ניתוח פנים, ניתוח טקסט, ועוד.",
+      "description": "בקטגוריה זו תמצאו נושאים שונים ומרתקים בתחום הבינה המלאכותית, כולל ניתוח פנים, ניתוח טקסט, זיהוי רגשות, עיבוד שפה טבעית, למידת מכונה, זיהוי דפוסים ועוד. כאן תלמדו כיצד להשתמש בטכנולוגיות מתקדמות כדי להבין ולנתח מידע .",
       "image": "../../assets/Images/ai.jpg",
       "videos": [
         {
