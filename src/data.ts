@@ -133,6 +133,7 @@ def sort_words(sentence):
       }
     ]
   },
+
   {
     id: 4,
     title: 'Find the Missing Number',
@@ -142,6 +143,7 @@ def sort_words(sentence):
     example: 'Input: [1, 2, 3, 5]  Output: 4',
     suggestedSolutions: []
   },
+
   {
     id: 5,
     title: 'Matrix Spiral Traversal',
@@ -151,6 +153,7 @@ def sort_words(sentence):
     example: 'Input: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]  Output: [1, 2, 3, 6, 9, 8, 7, 4, 5]',
     suggestedSolutions: []
   },
+
   {
     id: 6,
     title: 'Smart Date Formatter',
@@ -183,31 +186,33 @@ def format_date(date_str):
 print(format_date("2024-02-15"))  # Output: "Yesterday"
         `
       }
+      ,  
+      {
+        firstName: 'Ayala',
+        lastName: 'Y',
+        email: 'a83245064@gmail.com',
+        code: `
+    from datetime import datetime, timedelta
+    
+    def readable_date(date_str):
+    # Parse the input date string
+    input_date = datetime.strptime(date_str, "%Y-%m-%d").date()
+    today = datetime.today().date()
+    yesterday = today - timedelta(days=1)
+    
+    # Check for today or yesterday
+    if input_date == today:
+        return "Today"
+    elif input_date == yesterday:
+        return "Yesterday"
+    else:
+        # Format the date for other cases
+        return input_date.strftime("%-d{} of %B, %Y").format(
+            "th" if 11 <= input_date.day <= 13 else {1: "st", 2: "nd", 3: "rd"}.get(input_date.day % 10, "th")
+        )
+        `
+      }
     ]
   },
-  {
-    firstName: 'Ayala',
-    lastName: 'Y',
-    email: 'a83245064@gmail.com',
-    code: `
-from datetime import datetime, timedelta
 
-def readable_date(date_str):
-# Parse the input date string
-input_date = datetime.strptime(date_str, "%Y-%m-%d").date()
-today = datetime.today().date()
-yesterday = today - timedelta(days=1)
-
-# Check for today or yesterday
-if input_date == today:
-    return "Today"
-elif input_date == yesterday:
-    return "Yesterday"
-else:
-    # Format the date for other cases
-    return input_date.strftime("%-d{} of %B, %Y").format(
-        "th" if 11 <= input_date.day <= 13 else {1: "st", 2: "nd", 3: "rd"}.get(input_date.day % 10, "th")
-    )
-    `
-  }
 ];
