@@ -89,7 +89,9 @@
     align-items: center;
     background-image: linear-gradient(135deg, #082a65, #9e1599);
     border: none;
+    cursor: pointer;
 }
+
 
 /* אייקון של ה-Copy */
 .copy-btn mat-icon {
@@ -207,4 +209,48 @@
     .title {
         margin-top: 10%;
     }
+}
+
+@keyframes glitterFall {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px) translateX(-20px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px) translateX(20px);
+    }
+}
+
+.glitter-background {
+    position: fixed; /* חשוב למקם את הרקע על כל הדף */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* לוודא שהנצנצים מאחורי כל שאר האלמנטים */
+    pointer-events: none; /* מונע התערבות בתפקוד של אלמנטים אחרים */
+}
+
+.glitter {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: radial-gradient(circle, #ff0099, #9900ff, #00c2ff);
+    border-radius: 50%;
+    animation: glitterFall 3s infinite ease-in-out;
+}
+
+.glitter:nth-child(odd) {
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+}
+
+.glitter:nth-child(even) {
+    animation-duration: 2.5s;
+    animation-delay: 1s;
 }

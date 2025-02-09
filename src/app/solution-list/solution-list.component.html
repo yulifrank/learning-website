@@ -1,15 +1,15 @@
+
 <div *ngIf="solutions.length === 0" class="no-solutions-message">
     <p>No solutions available yet.</p>
 </div>
 
-
 <h1 class="title">פתרונות שהוגשו</h1>
-<button  (click)="goBack()" class="back-button">
+
+<button (click)="goBack()" class="back-button">
     <mat-icon>arrow_back</mat-icon>
-  </button>
-  
+</button>
+
 <div class="solutions-container">
-    
     <div *ngFor="let solution of solutions" class="solution-card-container">
         <mat-card class="solution-card">
             <mat-card-header>
@@ -20,7 +20,6 @@
                     <mat-icon *ngIf="!solution.copied">content_copy</mat-icon>
                     <mat-icon *ngIf="solution.copied">check_circle</mat-icon>
                 </button>
-    
                 <pre class="solution-code">
                     {{ solution.code }}
                 </pre>

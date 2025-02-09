@@ -105,6 +105,25 @@
       ]
     },
     {
+      "name": "בינה מלאכותית",
+      "description": "בקטגוריה זו תמצאו נושאים שונים בתחום הבינה המלאכותית: ניתוח פנים, ניתוח טקסט, ועוד.",
+      "image": "../../assets/Images/ai.jpg",
+      "videos": [
+        {
+          "title": "זיהוי וניתוח רגשות בתמונות עם DeepFace ב-Python",
+          "description": "איך לזהות ולהבין רגשות בתמונות באמצעות DeepFace ב-Python.",
+          "youtubeId": "NxyQObSoo0Y",
+          "imageUrl": "../../assets/Images/py-df.jpg"
+        },
+        {
+          "title": "ניתוח רגשות עם TextBlob ב-Python | חיובי, שלילי או ניטרלי?",
+          "description": "בסרטון הזה נלמד איך לבצע ניתוח רגשות (Sentiment Analysis) בעזרת ספריית TextBlob ב-Python.אנחנו נבחן כיצד לאבחן טקסט ולגלות אם הוא חיובי, שלילי או ניטרלי.",
+          "youtubeId": "4izvsHkBCiI",
+          "imageUrl": "../../assets/Images/py-tb.jpg"
+        }
+      ]
+    },
+    {
       "name": " Python חישוב ביטויים ",
       "description": "כאן תלמדו איך לבנות מערכת לחישוב ביטויים מתמטיים בעזרת Python. התהליך יכלול יצירת מודלים, אלגוריתמים ושימוש בספריות שונות ב-Python כדי לחשב ביטויים בצורה חכמה ויעילה.",
       "image": "../../assets/Images/python.png",
@@ -129,20 +148,8 @@
         }
       ]
     },
-    {
-      "name": "  Python | ניתוח רגשות   ",
-      "description": "בקטגוריה זו תלמדו איך להשתמש בספריית DeepFace לזיהוי וניתוח רגשות בתמונות בעזרת Python. 🤖🖼️💻",
-      "image": "../../assets/Images/py-df.jpg",
-      "videos": [
-        {
-          "title": "זיהוי וניתוח רגשות בתמונות עם DeepFace ב-Python",
-          "description": "איך לזהות ולהבין רגשות בתמונות באמצעות DeepFace ב-Python. 🔍🤖",
-          "youtubeId": "NxyQObSoo0Y",
-          "imageUrl": "../../assets/Images/py-df.jpg"
-        }
-      ]
-    }
-,    
+
+    
     {
       "name": "נושאים שונים",
       "description": "קטגוריה זו כוללת מגוון של נושאים שונים ומרתקים בעולם הנדסת התוכנה, אלגוריתמים וטכנולוגיות שונות.",
