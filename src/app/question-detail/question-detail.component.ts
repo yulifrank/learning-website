@@ -86,7 +86,8 @@ export class QuestionDetailComponent {
       userSolution: this.userSolution,
     };
 
-    Emailjs.send('your_service_id', 'your_template_id', templateParams)
+    Emailjs.send("service_z6fharp", "template_ga65e1w", templateParams, "Cz5nqu3ctq_otfrnr")
+
       .then(() => {
         this.successMessage = "✅ The solution is submitted successfully!";
         this.firstName = "";
