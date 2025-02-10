@@ -148,25 +148,25 @@
     {
       "name": " Python חישוב ביטויים ",
       "description": "כאן תלמדו איך לבנות מערכת לחישוב ביטויים מתמטיים בעזרת Python. התהליך יכלול יצירת מודלים, אלגוריתמים ושימוש בספריות שונות ב-Python כדי לחשב ביטויים בצורה חכמה ויעילה.",
-      "image": "../../assets/Images/python.png",
+      "image": "../../assets/Images/py.jpg",
       "videos": [
         {
           "title": "איך לבנות מערכת לחישוב ביטויים מתמטיים? | Python - חלק 1: מחלקות בסיסיות",
           "description": "✨ בסרטון הזה אנחנו מתחילים את המסע לבניית מערכת לחישוב ביטויים מתמטיים בצורה מתקדמת ב-Python!",
           "youtubeId": "h_0YNA-EBSE",
-          "imageUrl": "../../assets/Images/python.png"
+          "imageUrl": "../../assets/Images/py.jpg"
         },
         {
           "title": "איך לבנות מערכת לחישוב ביטויים מתמטיים? | Python - חלק 2: אלגוריתם Shunting Yard",
           "description": "💡 איך מחשבים מבינים ביטויים מתמטיים? 🤔 בואו נצלול לתוך אלגוריתם שנטינג יארד 📐.",
           "youtubeId": "DwttgUWXUOk",
-          "imageUrl": "../../assets/Images/python.png"
+          "imageUrl": "../../assets/Images/py.jpg"
         },
         {
           "title": "איך לבנות מערכת לחישוב ביטויים מתמטיים? | Python - חלק 3: יצירת עץ ביטוי והרצה",
           "description": "🤩 בסרטון הזה אנחנו הופכים את פורמט הפוסטפיקס לעץ ביטויים חכם! 💻.",
           "youtubeId": "tQxM0ioBPpE",
-          "imageUrl": "../../assets/Images/python.png"
+          "imageUrl": "../../assets/Images/py.jpg"
         }
       ]
     },
