@@ -21,7 +21,7 @@
   justify-content: center;  /* מרכז את הכרטיסיות */
   gap: 20px;
   padding: 0 30px;
-  margin-top: 7%;
+  margin-top: 10%;
   direction: rtl;
   animation: fadeIn 1s ease-in-out;
   margin-right: 4%;
