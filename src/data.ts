@@ -81,7 +81,7 @@ static int[] FindPair(int[] nums, int target)
 
   {
     id: 2,
-    title: 'Is a Rotated Palindrome?',
+    title: 'Is a Rotated Palindrome    ?',
     difficulty: 'Medium',
     shortDescription: 'Check if a string can become a palindrome by rotating it.',
     fullDescription: 'A rotated palindrome is a string that can be rearranged through rotation to form a palindrome. Write a function that checks whether a given string can become a palindrome by rotating its characters. The function should ignore spaces and be case-insensitive.',
