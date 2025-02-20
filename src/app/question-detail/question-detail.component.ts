@@ -42,7 +42,7 @@ export class QuestionDetailComponent {
   showForm: boolean = false;
   deadlinePassed: boolean;
   deadlineProgress: number = 0;
-  deadlineDate: Date = new Date(2025, 3, 1); // March is month 2
+  deadlineDate: Date = new Date(2025, 4, 1); // March is month 2
   startDate: Date = new Date(2025, 1, 1); // February is month 1
 
   constructor(private route: ActivatedRoute ,private location: Location) {
