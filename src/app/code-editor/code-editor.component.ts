@@ -134,27 +134,28 @@ export class CodeEditorComponent implements AfterViewInit {
     });
   }
   
+// נוודא ש־Pyodide מוכן לפני הריצה
+async runPython(code: string): Promise<string> {
+  try {
+    await this.pyodideReady; // מחכה לטעינה
 
-  async runPython(code: string): Promise<string> {
-    try {
-      await this.pyodideReady; // Wait for Pyodide to load
+    const output = await window.pyodide.runPythonAsync(`
+import sys
+import io
+sys.stdout = io.StringIO()
+sys.stderr = sys.stdout
 
-      const output = await window.pyodide.runPythonAsync(`
-        import sys
-        import io
-        sys.stdout = io.StringIO()
-        sys.stderr = sys.stdout
+${code}
 
-        ${code}
-
-        sys.stdout.getvalue()
-      `);
-      return output || '[no output]';
-    } catch (err: any) {
-      console.error('Python execution failed:', err);
-      return 'Python Error: ' + err.toString();
-    }
+sys.stdout.getvalue()
+    `);
+    return output || '[no output]';
+  } catch (err: any) {
+    console.error('Python execution failed:', err);
+    return 'Python Error: ' + err.toString();
   }
+}
+
 
   async runCSharp(code: string): Promise<string> {
     const data = {
