@@ -46,3 +46,8 @@
     margin-top: 1%;
     margin-bottom: 1%;
   }
+  .language-dropdown img {
+    vertical-align: middle;
+    border-radius: 4px;
+  }
+  

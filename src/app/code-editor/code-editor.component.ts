@@ -58,6 +58,25 @@ export class CodeEditorComponent implements AfterViewInit {
 
   pyodideReady: Promise<void>;
   private pyodideReadyResolve!: () => void;
+  languages = [
+    {
+      value: 'javascript',
+      label: 'JavaScript',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
+    },
+    {
+      value: 'python',
+      label: 'Python',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'
+    },
+    {
+      value: 'csharp',
+      label: 'C#',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg'
+    }
+  ];
+  
+  
 
   constructor() {
     this.pyodideReady = new Promise(resolve => {

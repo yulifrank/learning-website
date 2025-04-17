@@ -1,12 +1,22 @@
 <div class="editor-container text-box">
-      <mat-form-field appearance="fill" class="language-dropdown">
+    <mat-form-field appearance="fill" class="language-dropdown">
         <mat-label>Choose Language</mat-label>
         <mat-select [(ngModel)]="selectedLanguage" (selectionChange)="onLanguageChange()">
-          <mat-option value="javascript">JavaScript</mat-option>
-          <mat-option value="python">Python</mat-option>
-          <mat-option value="csharp">C#</mat-option>
+          <mat-option value="javascript">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="20" style="margin-right: 8px;">
+            JavaScript
+          </mat-option>
+          <mat-option value="python">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="20" style="margin-right: 8px;">
+            Python
+          </mat-option>
+          <mat-option value="csharp">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" width="20" style="margin-right: 8px;">
+            C#
+          </mat-option>
         </mat-select>
       </mat-form-field>
+      
   
     <ngx-codemirror
       [(ngModel)]="code"
