@@ -42,9 +42,22 @@
 
   /* כפתור */
   button {
-    background: linear-gradient(45deg, rgba(23, 10, 171, 0.7), rgba(80, 0, 54, 0.8));
-    color: white;
+    background: linear-gradient(45deg, rgba(29, 13, 203, 0.7), rgba(135, 4, 91, 0.8));
+    color: white !important;
     padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+  .editButton{
+    background: linear-gradient(45deg, rgba(57, 45, 190, 0.7), rgba(80, 0, 54, 0.8));
+    color: white !important;
+    padding: 12px 20px;
+    border-radius: 8px !important;
     border: none;
     cursor: pointer;
     border-radius: 15px;

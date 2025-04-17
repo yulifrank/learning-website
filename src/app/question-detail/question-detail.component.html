@@ -51,7 +51,7 @@
   </mat-card>
 
   <button mat-button (click)="toggleForm()" class="toggle-form-btn" *ngIf="!deadlinePassed">
-    ➤ Submit Your Solution
+    ➤ Add Your Solution
   </button>
 
   <p class="deadline-message" *ngIf="deadlinePassed">
@@ -76,10 +76,10 @@
       <label for="email">Email</label>
       <input type="email" id="email" [(ngModel)]="email" name="email" required>
     </div>
-
+<div>
   <!-- כפתור לפתיחת העורך - תמיד מופיע כל עוד הדדליין לא עבר -->
-  <button mat-button (click)="showEditor = true" *ngIf="!deadlinePassed">
-    🛠 Edit Your Code
+  <button class="editButton" mat-button (click)="showEditor = true" *ngIf="!deadlinePassed">
+    🛠 click  here to edit your code
   </button>
   
   <!-- קומפוננטת העורך עצמה -->
@@ -89,6 +89,7 @@
     (codeChanged)="userSolution = $event"
     (closeEditor)="showEditor = false">
   </app-code-editor>
+</div>
 
 
 

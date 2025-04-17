@@ -8,6 +8,24 @@ export const codingChallenges = [
     example: 'Input: [2, 4, 5, 1, 8, 9], Target: 10  Output: [2, 8]',
     suggestedSolutions: [
       {
+        firstName: 'YAEL',
+        lastName: 'FRANK',
+        code: `
+    def findToSum(target,array):
+        dict = {}
+        for number in array:
+          if (target-number) in dict:
+            return True
+          dict[number] = True
+        return False
+          
+         
+      target = 14
+      array =[2,3,4,6,6,4]
+      print(findToSum(target,array))
+        `
+      },
+      {
         firstName: 'Shira',
         lastName: 'Ytzkowits',
         code: `
