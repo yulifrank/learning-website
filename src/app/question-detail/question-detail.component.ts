@@ -11,6 +11,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@mui/icons-material';
 import { Location } from '@angular/common';
+import { CodeEditorComponent } from '../code-editor/code-editor.component';
 
 
 @Component({
@@ -24,7 +25,8 @@ import { Location } from '@angular/common';
     MatCardModule,
     MatFormFieldModule,
     MatIconModule,
-    RouterModule
+    RouterModule,
+    CodeEditorComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './question-detail.component.html',
@@ -42,8 +44,10 @@ export class QuestionDetailComponent {
   showForm: boolean = false;
   deadlinePassed: boolean;
   deadlineProgress: number = 0;
-  deadlineDate: Date = new Date(2025, 6, 1); // March is month 2
-  startDate: Date = new Date(2025, 1, 1); // February is month 1
+  deadlineDate: Date = new Date(2025, 6, 1); 
+  startDate: Date = new Date(2025, 1, 1); 
+  showEditor: boolean = false;
+
 
   constructor(private route: ActivatedRoute ,private location: Location) {
     this.deadlinePassed = new Date() > this.deadlineDate;

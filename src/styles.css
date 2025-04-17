@@ -1,5 +1,8 @@
+@import "codemirror/lib/codemirror.css";
+@import "codemirror/theme/material.css";
 
-  
+
+
   html, body {
     height: 100%;
     margin: 0;

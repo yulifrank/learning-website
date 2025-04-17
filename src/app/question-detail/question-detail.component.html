@@ -29,6 +29,12 @@
   
   <h1>{{ question.title }}</h1>
 
+ 
+
+
+
+
+
   <mat-card class="text-box">
     <h3><mat-icon>star</mat-icon> Difficulty Level</h3>
     <p class="difficulty">{{ question.difficulty }}</p>
@@ -52,6 +58,9 @@
     ⛔ The deadline for submission has passed. You can no longer submit a solution.
   </p>
 
+ 
+  
+
   <form (ngSubmit)="sendSolution()" *ngIf="showForm && !deadlinePassed" class="form">
     <div class="form-group">
       <label for="firstname">First Name</label>
@@ -68,13 +77,20 @@
       <input type="email" id="email" [(ngModel)]="email" name="email" required>
     </div>
 
-    <div class="form-group">
-      <label for="userSolution">Paste Your Code Here</label>
-      <textarea id="userSolution" [(ngModel)]="userSolution" name="userSolution" rows="5" required></textarea>
-      <button type="button" (click)="copyCode()" class="copy-btn">
-        <mat-icon>content_copy</mat-icon>
-      </button>
-    </div>
+  <!-- כפתור לפתיחת העורך - תמיד מופיע כל עוד הדדליין לא עבר -->
+  <button mat-button (click)="showEditor = true" *ngIf="!deadlinePassed">
+    🛠 Edit Your Code
+  </button>
+  
+  <!-- קומפוננטת העורך עצמה -->
+  <app-code-editor
+    *ngIf="showEditor"
+    [initialCode]="userSolution"
+    (codeChanged)="userSolution = $event"
+    (closeEditor)="showEditor = false">
+  </app-code-editor>
+
+
 
     <button mat-raised-button color="primary" type="submit" [disabled]="loading">
       <span *ngIf="!loading">Submit Solution</span>

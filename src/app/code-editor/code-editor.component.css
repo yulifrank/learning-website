@@ -1,0 +1,48 @@
+.editor-container {
+    margin: 20px 0;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.077);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+  }
+  
+  .language-selector {
+    margin-bottom: 20px;
+  }
+  
+
+  
+  .language-dropdown .mat-form-field-wrapper {
+    padding: 0 10px;
+  }
+  
+  .editor-buttons {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  textarea {
+    width: 97%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    resize: vertical;
+  }
+  button {
+    background: linear-gradient(45deg, rgba(23, 10, 171, 0.7), rgba(80, 0, 54, 0.8));
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }

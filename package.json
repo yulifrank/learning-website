@@ -22,8 +22,12 @@
     "@angular/router": "^17.0.0",
     "@ctrl/ngx-codemirror": "^7.0.0",
     "@mui/icons-material": "^6.4.1",
+    "codemirror": "^5.62.0",
     "emailjs-com": "^3.2.0",
     "material-icons": "^1.13.12",
+    "monaco-editor": "^0.52.2",
+    "ngx-monaco-editor": "^12.0.0",
+    "pyodide": "^0.27.5",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
