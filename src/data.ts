@@ -11,50 +11,49 @@ export const codingChallenges = [
         firstName: 'YAEL',
         lastName: 'FRANK',
         code: `
-      def findToSum(target, array):
-          dict = {}
-          for number in array:
-              if (target - number) in dict:
-                  return True
-              dict[number] = True
-          return False
-      
-      target = 14
-      array = [2, 3, 4, 6, 6, 4]
-      print(findToSum(target, array))
+def findToSum(target, array):
+    dict = {}
+    for number in array:
+        if (target - number) in dict:
+            return True
+        dict[number] = True
+    return False
+
+target = 14
+array = [2, 3, 4, 6, 6, 4]
+print(findToSum(target, array))
         `
       },
-      
       {
         firstName: 'Shira',
         lastName: 'Ytzkowits',
         code: `
-  def find_pair_with_sum(arr, target):
-      seen = set()
-      for num in arr:
-          complement = target - num
-          if complement in seen:
-              return [complement, num]
-          seen.add(num)
-      return []  # Return an empty list if no pair is found
-  
-  # Example Usage
-  arr = [4, 7, 1, -3, 2]
-  target = 5
-  print(find_pair_with_sum(arr, target))  # Output: [4, 1]
+def find_pair_with_sum(arr, target):
+    seen = set()
+    for num in arr:
+        complement = target - num
+        if complement in seen:
+            return [complement, num]
+        seen.add(num)
+    return []  # Return an empty list if no pair is found
+
+# Example Usage
+arr = [4, 7, 1, -3, 2]
+target = 5
+print(find_pair_with_sum(arr, target))  # Output: [4, 1]
         `
       },
       {
         firstName: 'Rebeka',
         lastName: 'Tolidano',
         code: `
-  def return_pair_to_target(target, array):
-      dict = {}
-      for num in array:
-          complement = target - num
-          if complement in dict:
-              return [complement, num]
-          dict[num] = 1
+def return_pair_to_target(target, array):
+    dict = {}
+    for num in array:
+        complement = target - num
+        if complement in dict:
+            return [complement, num]
+        dict[num] = 1
         `
       },
       {
@@ -62,44 +61,42 @@ export const codingChallenges = [
         lastName: 'Mitelman',
         code: `
 static int[] FindPair(int[] nums, int target)
-  {
-     HashSet<int> numbersSet = new HashSet<int>();
-     
-     foreach (int num in nums)
-     {
-         int complement = target - num;
-         if (numbersSet.Contains(complement))
-         {
-             return new int[] { complement, num }; // מחזיר את הזוג שמצאנו
-         }
-         numbersSet.Add(num);
-  }
-      
-      return new int[0]; 
-  }
-`
+{
+    HashSet<int> numbersSet = new HashSet<int>();
+
+    foreach (int num in nums)
+    {
+        int complement = target - num;
+        if (numbersSet.Contains(complement))
+        {
+            return new int[] { complement, num }; // מחזיר את הזוג שמצאנו
+        }
+        numbersSet.Add(num);
+    }
+
+    return new int[0];
+}
+        `
       },
       {
         firstName: 'Chaya',
         lastName: 'Avramovitz',
         code: `
-  def find_sum_pair(nums, target_sum):
-      seen_elements = {}
-      for number in nums:
-          diff = target_sum - number
-          if diff in seen_elements:
-              return [diff, number]
-          seen_elements[number] = True
-      return []  # No pair found
+def find_sum_pair(nums, target_sum):
+    seen_elements = {}
+    for number in nums:
+        diff = target_sum - number
+        if diff in seen_elements:
+            return [diff, number]
+        seen_elements[number] = True
+    return []  # No pair found
         `
       }
     ]
-  }
-,  
-
+  },
   {
     id: 2,
-    title: 'Is a Rotated Palindrome    ?',
+    title: 'Is a Rotated Palindrome ?',
     difficulty: 'Medium',
     shortDescription: 'Check if a string can become a palindrome by rotating it.',
     fullDescription: 'A rotated palindrome is a string that can be rearranged through rotation to form a palindrome. Write a function that checks whether a given string can become a palindrome by rotating its characters. The function should ignore spaces and be case-insensitive.',
@@ -120,7 +117,6 @@ def can_be_polindrom(string):
       }
     ]
   },
-
   {
     id: 3,
     title: 'Rearrange Words Alphabetically',
@@ -139,19 +135,18 @@ import re
 def sort_words(sentence):
     # Normalize spaces
     normalized_sentence = ' '.join(sentence.split())
-    
+
     # Extract words and keep punctuation
     words = re.findall(r'\\b\\w+\\b|[^\\w\\s]', normalized_sentence)
-    
+
     # Sort words case-insensitively
     sorted_words = sorted(words, key=lambda x: x.lower())
-    
+
     return ' '.join(sorted_words)
         `
       }
     ]
   },
-
   {
     id: 4,
     title: 'Find the Missing Number',
@@ -161,7 +156,6 @@ def sort_words(sentence):
     example: 'Input: [1, 2, 3, 5]  Output: 4',
     suggestedSolutions: []
   },
-
   {
     id: 5,
     title: 'Matrix Spiral Traversal',
@@ -171,7 +165,6 @@ def sort_words(sentence):
     example: 'Input: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]  Output: [1, 2, 3, 6, 9, 8, 7, 4, 5]',
     suggestedSolutions: []
   },
-
   {
     id: 6,
     title: 'Smart Date Formatter',
@@ -189,35 +182,34 @@ from datetime import date, timedelta
 def format_date(date_str):
     today = date.today()
     input_date = date.fromisoformat(date_str)
-    
+
     if input_date == today:
         return "Today"
     elif input_date == today - timedelta(days=1):
         return "Yesterday"
-    
+
     day, month, year = input_date.day, input_date.strftime("%B"), input_date.year
     suffix = "th" if 10 <= day % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(day % 10, "th")
-    
+
     return f"{day}{suffix} of {month}, {year}"
 
 # Example Usage
 print(format_date("2024-02-15"))  # Output: "Yesterday"
         `
-      }
-      ,  
+      },
       {
         firstName: 'Ayala',
         lastName: 'Y',
         email: 'a83245064@gmail.com',
         code: `
-    from datetime import datetime, timedelta
-    
-    def readable_date(date_str):
+from datetime import datetime, timedelta
+
+def readable_date(date_str):
     # Parse the input date string
     input_date = datetime.strptime(date_str, "%Y-%m-%d").date()
     today = datetime.today().date()
     yesterday = today - timedelta(days=1)
-    
+
     # Check for today or yesterday
     if input_date == today:
         return "Today"
@@ -231,6 +223,5 @@ print(format_date("2024-02-15"))  # Output: "Yesterday"
         `
       }
     ]
-  },
-
+  }
 ];
