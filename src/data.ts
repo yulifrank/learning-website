@@ -11,20 +11,20 @@ export const codingChallenges = [
         firstName: 'YAEL',
         lastName: 'FRANK',
         code: `
-    def findToSum(target,array):
-        dict = {}
-        for number in array:
-          if (target-number) in dict:
-            return True
-          dict[number] = True
-        return False
-          
-         
+      def findToSum(target, array):
+          dict = {}
+          for number in array:
+              if (target - number) in dict:
+                  return True
+              dict[number] = True
+          return False
+      
       target = 14
-      array =[2,3,4,6,6,4]
-      print(findToSum(target,array))
+      array = [2, 3, 4, 6, 6, 4]
+      print(findToSum(target, array))
         `
       },
+      
       {
         firstName: 'Shira',
         lastName: 'Ytzkowits',
