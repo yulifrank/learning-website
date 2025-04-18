@@ -218,4 +218,13 @@ sys.stdout.getvalue()
       lang === 'csharp' ? 'text/x-csharp' :
       'javascript';
   }
+
+  getSelectedLanguageIcon(): string {
+    return this.languages.find(lang => lang.value === this.selectedLanguage)?.icon || '';
+  }
+  
+  getSelectedLanguageLabel(): string {
+    return this.languages.find(lang => lang.value === this.selectedLanguage)?.label || '';
+  }
+  
 }

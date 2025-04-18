@@ -2,27 +2,39 @@
     <mat-form-field appearance="fill" class="language-dropdown">
         <mat-label>Choose Language</mat-label>
         <mat-select [(ngModel)]="selectedLanguage" (selectionChange)="onLanguageChange()">
-          <mat-option value="javascript">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="20" style="margin-right: 8px;">
-            JavaScript
-          </mat-option>
-          <mat-option value="python">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="20" style="margin-right: 8px;">
-            Python
-          </mat-option>
-          <mat-option value="csharp">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" width="20" style="margin-right: 8px;">
-            C#
+      
+          <!-- אייקון שמופיע גם כשהרשימה סגורה -->
+          <mat-select-trigger>
+            <img
+              [src]="getSelectedLanguageIcon()"
+              width="20"
+              style="margin-right: 8px;"
+            />
+            {{ getSelectedLanguageLabel() }}
+          </mat-select-trigger>
+      
+          <!-- אפשרויות לבחירה -->
+          <mat-option *ngFor="let lang of languages" [value]="lang.value">
+            <img [src]="lang.icon" width="20" style="margin-right: 8px;" />
+            {{ lang.label }}
           </mat-option>
         </mat-select>
       </mat-form-field>
       
-  
-    <ngx-codemirror
-      [(ngModel)]="code"
-      [options]="editorOptions"
-      (ngModelChange)="codeChanged.emit($event)">
-    </ngx-codemirror>
+      
+      <div class="editor-wrapper">
+        <div class="language-badge">
+          <img [src]="getSelectedLanguageIcon()" width="18" />
+          {{ getSelectedLanguageLabel() }}
+        </div>
+      
+        <ngx-codemirror
+          [(ngModel)]="code"
+          [options]="editorOptions"
+          (ngModelChange)="codeChanged.emit($event)">
+        </ngx-codemirror>
+      </div>
+      
   
     <div class="editor-buttons">
       <button mat-raised-button color="primary" (click)="runCode()">▶️ Run</button>
