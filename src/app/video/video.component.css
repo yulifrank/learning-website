@@ -183,3 +183,15 @@
 .action-button:active {
   transform: scale(0.98);
 }
+
+
+@media (min-width: 1700px) {
+  .video-container {
+
+    height: calc(100vh - 50px);
+    max-width: 1574px;
+
+  }
+
+
+}
