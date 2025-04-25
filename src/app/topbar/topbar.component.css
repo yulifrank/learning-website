@@ -178,3 +178,19 @@ margin-top: 10%;}
     display: none;
   }
 }
+
+@media (min-width: 1700px) {
+  .topbar {
+
+    height: 120px;
+
+  }
+
+  .menu a {
+
+    font-size: 28px;
+
+  }
+
+
+}

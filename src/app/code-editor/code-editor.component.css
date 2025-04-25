@@ -68,4 +68,72 @@
     gap: 6px;
     z-index: 10;
   }
+
+  .editor-wrapper {
+    height: 60vh;
+    max-height: 700px;
+    min-height: 300px;
+  }
+  
+  ngx-codemirror {
+    height: 100% !important;
+    display: block;
+  }
+  
+  /* הכי חשוב – לגרום ל-CodeMirror עצמו לתפוס גובה */
+  ::ng-deep .CodeMirror {
+    height: 100% !important;
+  }
+  
+  
+  @media (min-width: 1600px) {
+    .editor-container {
+      padding: 20px;
+      font-size: 18px;
+    }
+  
+    textarea {
+      font-size: 18px;
+      padding: 29px;
+    }
+  
+    button {
+      font-size: 18px;
+      padding: 14px 24px;
+    }
+  
+    .language-badge {
+      font-size: 18px;
+      padding: 6px 10px;
+    }
+  }
+  @media (min-width: 1600px) {
+    .editor-wrapper ngx-codemirror {
+      height: 700px;
+      display: block; /* לוודא שהוא תופס מקום */
+    }
+  
+    iframe#iframeEditor {
+      height: 700px;
+    }
+    .editor-wrapper .CodeMirror {
+      min-height: 400px;
+      height: 60vh;
+    }
+
+    ngx-codemirror,
+ngx-codemirror > div {
+  height: 100% !important;
+}
+
+.editor-wrapper {
+  height: 60vh;
+  max-height: 900px;
+  min-height: 300px;
+}
+
+
+
+    
+  }
   

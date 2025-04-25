@@ -7,17 +7,13 @@ import { MatSelectModule } from '@angular/material/select';
 
 import 'codemirror/mode/javascript/javascript';
 import 'codemirror/mode/python/python';
-import 'codemirror/mode/clike/clike'; // For C#
-import "codemirror/mode/python/python"; // ודא שאתה טוען את המודול של פייתון
-import "codemirror/addon/hint/show-hint"; // הוסף את תוסף ההשלמה האוטומטית
-import "codemirror/addon/hint/javascript-hint"; // להשלמה אוטומטית ב-JavaScript
+import 'codemirror/mode/clike/clike';
+import "codemirror/addon/hint/show-hint";
+import "codemirror/addon/hint/javascript-hint";
 
 declare function loadPyodide(config?: any): Promise<any>;
-
 declare global {
-  interface Window {
-    pyodide: any;
-  }
+  interface Window { pyodide: any; }
 }
 
 @Component({
@@ -44,20 +40,21 @@ export class CodeEditorComponent implements AfterViewInit {
 
   editorOptions = {
     lineNumbers: true,
-    mode: 'javascript',  // אתה יכול לשנות את זה לפי השפה שבחרת
+    mode: 'javascript',
     theme: 'material',
     extraKeys: {
-      "Ctrl-Space": "autocomplete",  // לחצן להשלמה אוטומטית
-      "Tab": "autocomplete",  // לחצן Tab להשלמה אוטומטית
-      "Ctrl-Enter": () => this.runCode(),  // אפשר להריץ את הקוד עם Ctrl+Enter
+      "Ctrl-Space": "autocomplete",
+      "Tab": "autocomplete",
+      "Ctrl-Enter": () => this.runCode(),
     },
     hintOptions: {
-      completeSingle: false,  // על מנת לא להשלם אוטומטית ברגע שאתה מתחיל להקליד
+      completeSingle: false,
     }
   };
 
   pyodideReady: Promise<void>;
   private pyodideReadyResolve!: () => void;
+
   languages = [
     {
       value: 'javascript',
@@ -75,25 +72,24 @@ export class CodeEditorComponent implements AfterViewInit {
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg'
     }
   ];
-  
-  
 
   constructor() {
+    console.log('Initializing CodeEditorComponent');
     this.pyodideReady = new Promise(resolve => {
       this.pyodideReadyResolve = resolve;
     });
   }
 
   ngAfterViewInit(): void {
-    console.log('Editor initialized');
+    console.log('ngAfterViewInit triggered');
     this.initializePyodide();
   }
 
   async initializePyodide() {
     try {
-      console.log('Loading Pyodide...');
+      console.log('Attempting to load Pyodide');
       window.pyodide = await loadPyodide();
-      this.pyodideReadyResolve(); // Marks Pyodide as ready
+      this.pyodideReadyResolve();
       console.log('Pyodide loaded successfully');
     } catch (err) {
       console.error('Error loading Pyodide:', err);
@@ -101,64 +97,63 @@ export class CodeEditorComponent implements AfterViewInit {
   }
 
   onSave() {
+    console.log('Saving code:', this.code);
     this.codeChanged.emit(this.code);
     this.closeEditor.emit();
   }
+
   async runCode() {
+    console.log('Running code...');
     try {
-      this.output = 'Running...'; // Show running message
-      console.log('Starting to run code');
-      
+      this.output = 'Running...';
       let result: string;
       if (this.selectedLanguage === 'javascript') {
-        result = await this.runJavascript(this.code); // Run JavaScript
+        console.log('Selected language: JavaScript');
+        result = await this.runJavascript(this.code);
       } else if (this.selectedLanguage === 'python') {
-        result = await this.runPython(this.code); // Run Python
+        console.log('Selected language: Python');
+        result = await this.runPython(this.code);
       } else if (this.selectedLanguage === 'csharp') {
-        result = await this.runCSharp(this.code); // Run C#
+        console.log('Selected language: C#');
+        result = await this.runCSharp(this.code);
       } else {
-        result = 'Unsupported language'; // If language is not supported
+        result = 'Run not supported for this language.';
       }
-      
       this.output = result;
-      console.log(result);
     } catch (err) {
-      this.output = 'Error: ' + err; // In case of error
-      console.error('Error running code:', err);
+      this.output = 'Error: ' + err;
+      console.error('Error while running code:', err);
     }
   }
-  
-  // הפונקציה הזו מאפשרת להפעיל גם פונקציות שמוגדרות בקוד
+
   runJavascript(code: string): Promise<string> {
+    console.log('Running JavaScript code');
     return new Promise((resolve, reject) => {
       try {
         let consoleOutput = '';
         const originalConsoleLog = console.log;
-  
+
         console.log = (...args: any[]) => {
           consoleOutput += args.join(' ') + '\n';
           originalConsoleLog.apply(console, args);
         };
-  
-        // כאן אנחנו בודקים אם יש פונקציות בקוד (אם יש, נריץ אותן)
+
         const result = new Function(code)();
-  
+
         console.log = originalConsoleLog;
-  
         resolve(consoleOutput.trim() || (result !== undefined ? String(result) : '[no output]'));
       } catch (err: any) {
-        console.log = console.log; // Restore console.log
+        console.log = console.log;
         reject('JavaScript Error: ' + err.message);
       }
     });
   }
-  
-// נוודא ש־Pyodide מוכן לפני הריצה
-async runPython(code: string): Promise<string> {
-  try {
-    await this.pyodideReady; // מחכה לטעינה
 
-    const output = await window.pyodide.runPythonAsync(`
+  async runPython(code: string): Promise<string> {
+    console.log('Running Python code');
+    try {
+      await this.pyodideReady;
+      const output = await window.pyodide.runPythonAsync(`
 import sys
 import io
 sys.stdout = io.StringIO()
@@ -167,50 +162,29 @@ sys.stderr = sys.stdout
 ${code}
 
 sys.stdout.getvalue()
-    `);
-    return output || '[no output]';
-  } catch (err: any) {
-    console.error('Python execution failed:', err);
-    return 'Python Error: ' + err.toString();
-  }
-}
-
-
-  async runCSharp(code: string): Promise<string> {
-    const data = {
-      LanguageChoice: 1,  // 1 = C#
-      Program: code,
-      Input: '',
-      CompilerArgs: ''
-    };
-
-    try {
-      const response = await fetch('https://rextester.com/rundotnet/api', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      });
-
-      const result = await response.json();
-
-      if (result.Errors) {
-        console.error('C# Error:', result.Errors);
-        return 'C# Error: ' + result.Errors;
-      }
-
-      // Check if result is present and valid
-      if (result.Result) {
-        return result.Result || '[no output]';
-      } else {
-        return '[no output]';
-      }
+      `);
+      console.log('Python output:', output);
+      return output || '[no output]';
     } catch (err: any) {
-      console.error('C# Execution Error:', err);
-      return 'C# Execution Error: ' + err.message;
+      console.error('Python Error:', err);
+      return 'Python Error: ' + err.toString();
     }
   }
 
+  runCSharp(code: string): Promise<string> {
+    console.log('Running C# code');
+    return new Promise((resolve, reject) => {
+      try {
+        // You could call a C# runtime or service here
+        resolve('C# code execution not yet supported in this editor');
+      } catch (err: any) {
+        reject('C# Error: ' + err.message);
+      }
+    });
+  }
+
   onLanguageChange() {
+    console.log('Language changed to:', this.selectedLanguage);
     const lang = this.selectedLanguage;
     this.editorOptions.mode =
       lang === 'javascript' ? 'javascript' :
@@ -222,9 +196,47 @@ sys.stdout.getvalue()
   getSelectedLanguageIcon(): string {
     return this.languages.find(lang => lang.value === this.selectedLanguage)?.icon || '';
   }
-  
+
   getSelectedLanguageLabel(): string {
     return this.languages.find(lang => lang.value === this.selectedLanguage)?.label || '';
   }
+
+  openDotNetFiddle() {
+    console.log('Opening DotNetFiddle with code:', this.code);
+    const encodedCode = encodeURIComponent(this.code || '');
+    const url = `https://dotnetfiddle.net/?cs=${encodedCode}`;
+    window.open(url, '_blank');
+  }
+
+  saveCodeFromIframe() {
+    const iframe: HTMLIFrameElement = document.getElementById('dotnetFiddleIframe') as HTMLIFrameElement;
+    if (iframe) {
+      const iframeWindow = iframe.contentWindow;
+      if (iframeWindow) {
+        // Send a message to the iframe to retrieve the code
+        iframeWindow.postMessage({ type: 'getCode' }, 'https://dotnetfiddle.net');
+      }
+    }
+  }
+  
+  // קבלת הקוד מ-iframe
+  ngOnInit() {
+    console.log('ngOnInit triggered');
+    window.addEventListener('message', this.handleIframeMessage.bind(this));
+  }
+  
+  handleIframeMessage(event: MessageEvent) {
+    // Ensure the event is from the correct iframe source
+    if (event.origin === 'https://dotnetfiddle.net') {
+      const message = event.data;
+      if (message.type === 'code') {
+        this.code = message.code;
+        this.codeChanged.emit(this.code);
+        console.log('Received code from iframe:', this.code);
+      }
+    }
+  }
+  
+  
   
 }

@@ -76,7 +76,8 @@
   flex-direction: column;
   justify-content: space-between;
   height: auto;
-  width: 350px;
+  width: 25%;
+  height: 400px;
   max-width: 100%;
   overflow: hidden;
   position: relative;
@@ -240,4 +241,15 @@
 @media (max-width: 600px) {
   .home-container { margin-top: 10%; padding: 10px; }
   .category-card { width: 80%; }
+}
+
+@media (min-width: 1700px) {
+  .category-card {
+
+    height: auto;
+    width: 23%;
+    height: 350px;
+    max-width: 100%}
+
+
 }

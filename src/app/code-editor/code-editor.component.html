@@ -1,47 +1,57 @@
 <div class="editor-container text-box">
-    <mat-form-field appearance="fill" class="language-dropdown">
-        <mat-label>Choose Language</mat-label>
-        <mat-select [(ngModel)]="selectedLanguage" (selectionChange)="onLanguageChange()">
-      
-          <!-- אייקון שמופיע גם כשהרשימה סגורה -->
-          <mat-select-trigger>
-            <img
-              [src]="getSelectedLanguageIcon()"
-              width="20"
-              style="margin-right: 8px;"
-            />
-            {{ getSelectedLanguageLabel() }}
-          </mat-select-trigger>
-      
-          <!-- אפשרויות לבחירה -->
-          <mat-option *ngFor="let lang of languages" [value]="lang.value">
-            <img [src]="lang.icon" width="20" style="margin-right: 8px;" />
-            {{ lang.label }}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-      
-      
-      <div class="editor-wrapper">
-        <div class="language-badge">
-          <img [src]="getSelectedLanguageIcon()" width="18" />
-          {{ getSelectedLanguageLabel() }}
-        </div>
-      
-        <ngx-codemirror
-          [(ngModel)]="code"
-          [options]="editorOptions"
-          (ngModelChange)="codeChanged.emit($event)">
-        </ngx-codemirror>
-      </div>
-      
-  
-    <div class="editor-buttons">
-      <button mat-raised-button color="primary" (click)="runCode()">▶️ Run</button>
-      <button mat-raised-button color="accent" (click)="onSave()">💾 Save & Close</button>
+  <!-- Dropdown for Language Selection -->
+  <mat-form-field appearance="fill" class="language-dropdown">
+    <mat-label>Choose Language</mat-label>
+    <mat-select [(ngModel)]="selectedLanguage" (selectionChange)="onLanguageChange()">
+      <mat-select-trigger>
+        <img [src]="getSelectedLanguageIcon()" width="20" style="margin-right: 8px;" />
+        {{ getSelectedLanguageLabel() }}
+      </mat-select-trigger>
+      <mat-option *ngFor="let lang of languages" [value]="lang.value">
+        <img [src]="lang.icon" width="20" style="margin-right: 8px;" />
+        {{ lang.label }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="editor-wrapper">
+    <!-- Language Badge -->
+    <div class="language-badge">
+      <img [src]="getSelectedLanguageIcon()" width="18" />
+      {{ getSelectedLanguageLabel() }}
     </div>
-  
-    <h3>Output:</h3>
-    <textarea [(ngModel)]="output" readonly rows="10" cols="60"></textarea>
+
+    <!-- Code Editor for Languages other than C# -->
+    <ngx-codemirror
+      *ngIf="selectedLanguage !== 'csharp'"
+      [(ngModel)]="code"
+      [options]="editorOptions"
+      (ngModelChange)="codeChanged.emit($event)">
+    </ngx-codemirror>
+
+    <!-- iframe for C# code -->
+    <iframe
+      *ngIf="selectedLanguage === 'csharp'"
+      id="dotnetFiddleIframe"
+      src="https://dotnetfiddle.net/"
+      width="100%"
+      height="500px"
+      style="border: 1px solid #ccc; border-radius: 8px;">
+    </iframe>
+
+    <!-- Save C# code from iframe -->
+    <button *ngIf="selectedLanguage === 'csharp'" mat-raised-button color="warn" (click)="saveCodeFromIframe()">💾 Save C# Code</button>
+
+    <!-- Button to open DotNetFiddle in a new tab -->
   </div>
-  
+
+  <!-- Editor Control Buttons -->
+  <div class="editor-buttons">
+    <button *ngIf="selectedLanguage !== 'csharp'" mat-raised-button color="primary" (click)="runCode()">▶️ Run</button>
+    <button mat-raised-button color="accent" (click)="onSave()">💾 Save & Close</button>
+  </div>
+
+  <!-- Output Display for Non-C# Languages -->
+  <h3 *ngIf="selectedLanguage !== 'csharp'">Output:</h3>
+  <textarea *ngIf="selectedLanguage !== 'csharp'" [(ngModel)]="output" readonly rows="10" cols="60"></textarea>
+</div>
