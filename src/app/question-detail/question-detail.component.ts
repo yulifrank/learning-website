@@ -44,7 +44,7 @@ export class QuestionDetailComponent {
   showForm: boolean = false;
   deadlinePassed: boolean;
   deadlineProgress: number = 0;
-  deadlineDate: Date = new Date(2025, 6, 1); 
+  deadlineDate: Date = new Date(2025, 9, 1); 
   startDate: Date = new Date(2025, 1, 1); 
   showEditor: boolean = false;
 
