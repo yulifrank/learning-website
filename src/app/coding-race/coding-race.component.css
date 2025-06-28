@@ -155,7 +155,6 @@ button:hover {
   background: linear-gradient(135deg, rgba(25, 53, 97, 0.655), rgba(129, 37, 139, 0.666));
   transform: scale(1.01);
 }
-/* כרטיסי האתגר */
 .challenge-card {
   display: flex;
   flex-direction: column;
